@@ -110,9 +110,9 @@
 				        'async': false,
 				        'global': false,
 				        'url':  filePath,
-				        'dataType': "jsonp",
+				        'dataType': "json",
 				        'success': function (data) {
-				            jsonCallback(data);
+				            json=jsonCallback();
 			        }
 			   		 });
 			   		 	return json;
