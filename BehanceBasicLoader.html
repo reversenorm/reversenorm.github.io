@@ -99,9 +99,8 @@
     <script type="text/javascript">
 
 
-        var BehanceProjects = jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&callback=json");
+        var BehanceProjects = jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&callback?");
 
- 		console.log(BehanceProjects);
    
         function jsonLoader(filePath){
 
@@ -113,7 +112,7 @@
 				        'url':  filePath,
 				        'dataType': "json",
 				        'success': function (data) {
-				            json = data;
+				            callback(data);
 			        }
 			   		 });
 			   		 	return json;
