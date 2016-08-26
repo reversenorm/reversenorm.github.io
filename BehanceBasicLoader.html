@@ -99,29 +99,29 @@
     <script type="text/javascript">
 
 
-        var BehanceData = "http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&callback=?";
+        var BehanceProjects = "http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&callback=?";
 
- 		console.log(BehanceData);
+ 		console.log(BehanceProjects);
    
-  //       function jsonLoader(filePath){
+        function jsonLoader(filePath){
 
-		// 	var BehanceData = (function () {
-		//     	var jason = null;
-		// 	   		 $.ajax({
-		// 		        'async': false,
-		// 		        'global': false,
-		// 		        'url':  filePath,
-		// 		        'dataType': "json",
-		// 		        'success': function (data) {
-		// 		            json = data;
-		// 	        }
-		// 	   		 });
-		// 	   		 	return json;
-		// 			})(); 
+			var BehanceData = (function () {
+		    	var jason = null;
+			   		 $.ajax({
+				        'async': false,
+				        'global': false,
+				        'url':  filePath,
+				        'dataType': "json",
+				        'success': function (data) {
+				            json = data;
+			        }
+			   		 });
+			   		 	return json;
+					})(); 
 
-		// 	return BehanceData;
+			return BehanceData;
 
-		// };//end json loader
+		};//end json loader
 
 		function openGallery(galleryId){
 			toggleLayer('overlay');
