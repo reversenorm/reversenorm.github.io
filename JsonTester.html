@@ -9,7 +9,6 @@
 
 var behanceProjects=null;
 function logResults(json){
-  console.log(json);
   behanceProjects=json;
   console.log(behanceProjects);
 }
@@ -21,6 +20,8 @@ $.ajax({
   dataType: "jsonp",
   jsonpCallback: "logResults"
 });
+
+console.log(behanceProjects);//outside work too?
 
 
 </script>
