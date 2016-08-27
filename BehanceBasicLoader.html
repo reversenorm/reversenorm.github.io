@@ -112,7 +112,7 @@
         var BehanceProjects = null;
         var galleryData=null;
 
-        jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?", 'projects');
+        jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&per_page=25&callback=?", 'projects');
 
    
         function jsonLoader(filePath, nextStep){
@@ -146,7 +146,7 @@
 
 		function openGallery(galleryId){
 			toggleLayer('overlay');
-			jsonLoader("/BehanceJSON/BehanceGallery/"+galleryId+".json", "gallery");//load the current gallery into galleryData on complete go to gallery builder
+			jsonLoader("http://www.behance.net/v2/projects/"+galleryId+"?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&callback=?", "gallery");//load the current gallery into galleryData on complete go to gallery builder
 		};
 
 		function galleryBuilder(galleryId){
