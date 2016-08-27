@@ -99,29 +99,40 @@
     <script type="text/javascript">
 
 
-        var BehanceProjects = jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&callback=JsonCallback");
+        var BehanceProjects = jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&callback=?");
+
+
+        function logResults(json){
+  		console.log(json);
+		}
+
+		$.ajax({
+		  url: BehanceProjects,
+		  dataType: "jsonp",
+		  jsonpCallback: "logResults"
+		});
 
    
-        function jsonLoader(filePath){
+  //       function jsonLoader(filePath){
 
-			var BehanceData = (function () {
-				var json=null;
-			   		 $.ajax({
-				        'async': false,
-				        'global': false,
-				        'url':  filePath,
-				        'dataType': "json",
-				        'JsonCallback': function (data) {
-				            json=data;
-			        }
-			   		 });
-			   		 console.log(json);
-			   		 	return json;
-					})(); 
-				console.log(BehanceData);
-			return BehanceData;
+		// 	var BehanceData = (function () {
+		// 		var json=null;
+		// 	   		 $.ajax({
+		// 		        'async': false,
+		// 		        'global': false,
+		// 		        'url':  filePath,
+		// 		        'dataType': "jsonp",
+		// 		        'JsonCallback': function (data) {
+		// 		            json=data;
+		// 	        }
+		// 	   		 });
+		// 	   		 console.log(json);
+		// 	   		 	return json;
+		// 			})(); 
+		// 		console.log(BehanceData);
+		// 	return BehanceData;
 
-		};//end json loader
+		// };//end json loader
 
 		function openGallery(galleryId){
 			toggleLayer('overlay');
