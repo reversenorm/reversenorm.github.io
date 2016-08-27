@@ -6,19 +6,20 @@
 <script>
 
  var ProjectsURL = "http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?";//url for json data on behance.
- var behanceProjects=$.ajax({
+ var behanceProjects=null;
+
+function logResults(jsonData){
+  behanceProjects=jsonData;
+  console.log(behanceProjects);
+}
+
+$.ajax({
   url: ProjectsURL,
   async: false,
   crossDomain: true,
   dataType: "jsonp",
   jsonpCallback: "logResults"
 });
-
-function logResults(json){
-  return json;
-}
-
-console.log(behanceProjects);
 
 
 
