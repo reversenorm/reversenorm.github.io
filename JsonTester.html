@@ -7,10 +7,11 @@
 
  var ProjectsURL = "http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?";//url for json data on behance.
 
-var behanceProjects=null;
+var behanceProjects=jsonLoader(ProjectsURL);
 
 
-function(ProjectsURL){$.ajax({
+function jsonLoader (ProjectsURL){
+			$.ajax({
 			  url: ProjectsURL,
 			  async: false,
 			  global: false,
@@ -21,8 +22,6 @@ function(ProjectsURL){$.ajax({
 		};
 
 function logResults(json){
-	console.log("Inside function");
-	console.log(json);
   behanceProjects=json;
 };
 
