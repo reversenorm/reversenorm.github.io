@@ -115,13 +115,13 @@
         function jsonLoader(filePath){
 
 			var BehanceData = (function () {
-		    	var jason = null;
+		    	var json = null;
 			   		 $.ajax({
 				        'async': false,
 				        'global': false,
 				        'url':  filePath,
-				        'dataType': "jsonp",
-				        jsonpCallback:: function (data) {
+				        'dataType': "json",
+				        'success': function (data) {
 				            json = data;
 			        }
 			   		 });
