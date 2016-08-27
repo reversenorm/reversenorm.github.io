@@ -99,23 +99,23 @@
     <script type="text/javascript">
 
 
-        var BehanceProjects = jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&callback=jsonCallback");
+        var BehanceProjects = jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&callback=?");
 
    
         function jsonLoader(filePath){
 
 			var BehanceData = (function () {
-		    	var jason = null;
+				var json=nill;
 			   		 $.ajax({
 				        'async': false,
 				        'global': false,
 				        'url':  filePath,
 				        'dataType': "json",
 				        'success': function (data) {
-				            jason=jsonCallback();
+				            json=data;
 			        }
 			   		 });
-			   		 	return jason;
+			   		 	return json;
 					})(); 
 
 			return BehanceData;
