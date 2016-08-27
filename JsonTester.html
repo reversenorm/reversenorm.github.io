@@ -20,6 +20,9 @@
 				        jsonpCallback: "SetData"
 			   		 });
 					})(); 
+					console.log('at return behance data');
+				            console.log(BehanceData);
+					return BehanceData;
 
 
 		};//end json loader
@@ -27,10 +30,10 @@
 		function SetData (data) {
 							console.log('at SetData');
 				            console.log(data);
-				           BehanceProjects=data;
+				           return data;
 			        }
 
-		console.log("at after function");
+		console.log("Outside function");
 		console.log(BehanceProjects);
 
 </script>
