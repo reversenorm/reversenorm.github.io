@@ -12,19 +12,22 @@ var projectsData=jsonLoader(projectsURL);
 function jsonLoader(thisURL){
 	var json=null;
 		$.ajax({
-		  'url': thisURL,
-		  'dataType': 'json',
-		  'async': false,
-		  'data': 'data',
-		  'success': function(data) {
-		  	console.log(data);
-		    json=data.projects;
-		    console.log(json);
-			}
-		  })
-		.done(function() {
-		  return json;
-		});
+		  url: thisURL,
+		  dataType: 'json',
+		  async: false,
+		  data: 'data',
+  		  async: false,
+    success: function(data){
+    	json=data
+    },
+    error: function(){
+    	alert("error importing www.Behance.net/jphillips01 data.");
+    },
+    complete: function(){
+    	console.log(json);
+    	return json;
+    }
+})
 };
 
 console.log(projectsData);
