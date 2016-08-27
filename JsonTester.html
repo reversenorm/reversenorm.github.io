@@ -6,31 +6,9 @@
 <script>
 var BehanceProjects=null;
 
-	jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=SetData");
 
-   
-function jsonLoader(filePath){
+var projectsURL="http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?";
 
-	
-	   		 $.ajax({
-		        async: false,
-		        global: true,
-		        url:  filePath,
-		        dataType: "jsonp",
-		        crossDomain: true,
-		        jsonpCallback: "SetData"
-	   		 });
-
-};//end json loader
-
-function SetData (data) {
-					console.log('at SetData');
-		            console.log(data);
-		           BehanceProjects=data;
-	        }
-
-console.log("Outside function");
-console.log(BehanceProjects);
 
 </script>
 
