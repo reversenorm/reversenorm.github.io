@@ -6,26 +6,29 @@
 <script>
 
 var projectsURL="http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?";
-var projectsData=null;
+var projectsData=jsonloader(projectsURL);
 
+
+function jsonLoader(thisURL){
+	var json=null;
 $.ajax({
-  url: projectsURL,
-  dataType: 'json',
-  async: false,
-  data: 'data',
-  success: function(data) {
+  'url': thisURL,
+  'dataType': 'json',
+  'async': false,
+  'data': 'data',
+  'success': function(data) {
   	console.log(data);
-    projectsData=data.projects;
-    console.log(projectsData);
+    json=data.projects;
+    console.log(json);
 	}
   })
 .done(function() {
-  logLoaded();
+  return json;
 });
-
-function logLoaded(){
-console.log(projectsData);
 }
+
+console.log(projectsData);
+
 
 </script>
 
