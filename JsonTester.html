@@ -18,11 +18,14 @@ $.ajax({
     projectsData=data.projects;
     console.log(projectsData);
 	}
+	.done(){
+		logLoaded();
+	}
   });
 
-
+function logLoaded(){
 console.log(projectsData);
-
+}
 
 </script>
 
