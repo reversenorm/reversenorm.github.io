@@ -1,36 +1,48 @@
 
 
-        var BehanceProjects = jsonLoader("/BehanceJSON/jphillips01_projects.json");
+        var BehanceProjects = null;
+        var galleryData=null;
 
-        function jsonLoader(filePath){
+        jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&per_page=25&callback=?", 'projects');
 
-			var BehanceData = (function () {
-		    	var jason = null;
+   
+        function jsonLoader(filePath, nextStep){
 			   		 $.ajax({
-				        'async': false,
 				        'global': false,
 				        'url':  filePath,
 				        'dataType': "json",
 				        'success': function (data) {
-				            json = data;
-			        }
-			   		 });
-			   		 	return json;
-					})(); 
+				        	if (nextStep=="projects"){
+				            BehanceProjects = data;
+				        	}
+				        	if (nextStep=="gallery"){
+				        		galleryData=data;
+				        	}
 
-			return BehanceData;
+				        },
+					complete: function() {
+						if (nextStep=="projects"){
+							loadThumbs();
+						}
+						if (nextStep=="gallery"){
+							console.log(galleryData);
+							galleryBuilder();
+
+						}
+					}
+ 			 });
 
 		};//end json loader
+
 
 		function openGallery(galleryId){
 			toggleLayer('overlay');//turn on overlay
 			toggleLayer('behanceGallery');//then turn on the specific gallery
-			document.getElementById("behanceGallery").innerHTML=galleryBuilder(galleryId);
+			jsonLoader("http://www.behance.net/v2/projects/"+galleryId+"?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&callback=?", "gallery");//load the current gallery into galleryData on complete go to gallery builder
 		};
 
 		function galleryBuilder(galleryId){
 
-			var galleryData=jsonLoader("/BehanceJSON/BehanceGallery/"+galleryId+".json");
 
 			var htmlString="<div class='closeX'><a href='#c' onclick="+'toggleOffAllGalleries();'+"align='right'>[X]</a></div><div class='galleryDescription'>"//add in the gallery description section
 
@@ -75,6 +87,18 @@
 			};
 				htmlString = htmlString.concat("</ul><br/></div>");
 				//close list and close viewWindow div
-			return htmlString;
+			document.getElementById("behanceGallery").innerHTML=htmlString;
 
+		};
+
+		function loadThumbs(){
+				var thumblist="<ul>";
+				for (var i=0; i<BehanceProjects["projects"].length; i++ ){
+					thumblist=thumblist.concat("<li class='glowEdges'><a href='#b' onclick='openGallery("+BehanceProjects["projects"][i]["id"]+");'><img src='"+BehanceProjects["projects"][i]["covers"][202]+"'><br/>"+BehanceProjects["projects"][i]["name"]+"</a></li>");//create a list element with each project's cover image and title. link the whole thing with and on click pass to generate and reveal the content of the project.
+				};
+
+				thumblist=thumblist.concat("</ul>");
+
+				document.getElementById("Design").innerHTML=thumblist;
+				
 		};
