@@ -10,7 +10,7 @@ var Projects=null;
 
  $.getJSON( projectsURL, function(data) {
 		  console.log( data );
-		  Projects=data;
+		  Projects=data["Projects"];
 		});
 
 		console.log(Projects);
