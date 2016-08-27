@@ -9,13 +9,14 @@
 
 var behanceProjects=null;
 
-					$.ajax({
-			  url: ProjectsURL,
-			  async: false,
-			  crossDomain: true,
-			  dataType: "jsonp",
-			  jsonpCallback: "logResults"
-			});
+		$.ajax({
+		  url: ProjectsURL,
+		  async: false,
+		  global: false,
+		  crossDomain: true,
+		  dataType: "jsonp",
+		  jsonpCallback: "logResults"
+		});
 
 
 function logResults(json){
