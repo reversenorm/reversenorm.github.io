@@ -13,8 +13,8 @@ function logResults(json){
 
 $.ajax({
   url: ProjectsURL,
-  async: false;
-  crossDomain: true;
+  async: false,
+  crossDomain: true,
   dataType: "jsonp",
   jsonpCallback: "logResults"
 });
