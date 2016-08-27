@@ -9,17 +9,10 @@ var projectsURL="http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZS
 var projectsAray=null;
 
 $.getJSON(projectsURL,
-  {
-  	crossDomain:true,
-  	async:true,
-    tags: "projects",
-    tagmode: "any",
-    format: "json"
-  },
   function(data) {
   	console.log(data);
     projectsArray=data;
-    console.log(projectsAra);
+    console.log(projectsArray);
   });
 
 
