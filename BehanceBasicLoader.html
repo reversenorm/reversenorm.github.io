@@ -189,6 +189,17 @@
 
 		};
 
+		function loadThumbs(){
+				var thumblist="<ul>";
+				for (var i=0; i<BehanceProjects["projects"].length; i++ ){
+					thumblist=thumblist.concat("<li class='glowEdges'><a href='#b' onclick='openGallery("+BehanceProjects["projects"][i]["id"]+");'><img src='"+BehanceProjects["projects"][i]["covers"][202]+"'><br/>"+BehanceProjects["projects"][i]["name"]+"</a></li>");//create a list element with each project's cover image and title. link the whole thing with and on click pass to generate and reveal the content of the project.
+				};
+
+				thumblist=thumblist.concat("</ul>");
+
+				document.getElementById("Design").innerHTML=thumblist;
+		};
+
     </script>
 <br />
 <br />
@@ -196,13 +207,8 @@
 
 <div id="Design"><!--this is equavalent to the Design ID on the index page and will replace the temporary content when combining elements-->
 	<ul >
-		<script>
-			function loadThumbs(){
-				for (var i=0; i<BehanceProjects["projects"].length; i++ ){
-					document.write("<li class='glowEdges'><a href='#b' onclick='openGallery("+BehanceProjects["projects"][i]["id"]+");'><img src='"+BehanceProjects["projects"][i]["covers"][202]+"'><br/>"+BehanceProjects["projects"][i]["name"]+"</a></li>");//create a list element with each project's cover image and title. link the whole thing with and on click pass to generate and reveal the content of the project.
-				};
-		};
-		</script>
+		<li>
+		</li>
 	</ul>
 </div><br /><br />
 
