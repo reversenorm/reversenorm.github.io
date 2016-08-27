@@ -8,9 +8,11 @@
 var projectsURL="http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?";
 var projectsData=null;
 
-function loadVars(){
+loadVars(projectsURL);
+
+function loadVars(ThisURL){
 $.ajax({
-  url: projectsURL,
+  url: ThisURL,
   dataType: 'jsonp',
   data: 'data',
   success: function(data) {
@@ -20,6 +22,7 @@ $.ajax({
 	},
 	complete: function() {
 		varsLoaded();
+		console.log("is complete");
 	}
   });
 
