@@ -8,7 +8,7 @@
 var projectsURL="http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?";
 var Projects=null;
 
-var RawData = $.getJSON( projectsURL, function(data) {
+ $.getJSON( projectsURL, function(data) {
 		  console.log( data );
 		  Projects=data;
 		});
