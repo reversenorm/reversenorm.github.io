@@ -9,6 +9,15 @@
 
 var behanceProjects=null;
 
+$.ajax({
+  'url': ProjectsURL,
+  'async': false,
+  'global': false,
+  'crossDomain': true,
+  'dataType': "jsonp",
+  'jsonpCallback': "logResults"
+});
+
 
 function logResults(json){
 	console.log("Inside Function");
@@ -16,15 +25,6 @@ function logResults(json){
   behanceProjects=json;
 }
 
-
-$.ajax({
-  url: ProjectsURL,
-  async: false,
-  global: false,
-  crossDomain: true,
-  dataType: "jsonp",
-  jsonpCallback: "logResults"
-});
 
 console.log("Outside function");
 console.log(behanceProjects);//Put into console to view.
