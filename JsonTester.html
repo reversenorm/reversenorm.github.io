@@ -5,30 +5,32 @@
 
 <script>
 
-var behanceProjects=jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?");
+ var BehanceProjects = jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?");
 
+   
+        function jsonLoader(filePath){
 
-function jsonLoader (ProjectsURL){
-			$.ajax({
-			  url: ProjectsURL,
-			  async: false,
-			  global: true,
-			  crossDomain: true,
-			  dataType: "jsonp",
-			  success: "logResults"
-			});
-		};
+			var BehanceData = (function () {
+		    	var json = null;
+			   		 $.ajax({
+				        'async': false,
+				        'global': false,
+				        'url':  filePath,
+				        'dataType': "jsonp",
+				        'jsonpCallback': function (data) {
+				            json = data;
+				            console.log(data);
+			        }
+			   		 });	
+			   		 	console.log("at return 1");
+			   		 	console.log json;
+			   		 	return json;
+					})(); 
+					console.log("at return 2");
+			   		 	console.log BehanceData;
+			return BehanceData;
 
-function logResults(json){
-	behanceProjects=json;
-	console.log("inside function");
-console.log(behanceProjects);//Put into console to view.
-  return json;
-};
-
-console.log("outside function");
-console.log(behanceProjects);//Put into console to view.
-
+		};//end json loader
 
 </script>
 
