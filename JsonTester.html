@@ -14,7 +14,8 @@ function jsonLoader(thisURL){
 		var json=null;
 			$.ajax({
 			  url: thisURL,
-			  dataType: 'jsonp',
+			  dataType: 'json',
+			  async: true,
 			  data: 'data',
 		success: function(data){
 			json=data.projects;
