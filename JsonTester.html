@@ -5,24 +5,20 @@
 
 <script>
 
-var projectsURL="http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=saveData";
+var projectsURL="http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?";
 var projectsArray=[];
 
 $.ajax({
-  url: projectsURL,
+  url: "/BehanceJSON/jphillips01_projects.json",
   dataType: 'json',
   async: false,
   data: 'data',
-  crossDomain:true,
-  callback: "saveData"
-  });
-
-  function saveData(data) {
+  success: function(data) {
   	console.log(data);
     projectsArray=data.projects;
     console.log(projectsArray);
 	}
-  
+  });
 
 console.log("Outside Get function");
 console.log(projectsArray);
