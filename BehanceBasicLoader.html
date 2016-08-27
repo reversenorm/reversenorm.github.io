@@ -145,7 +145,6 @@
 
 
 		function openGallery(galleryId){
-			toggleLayer('overlay');
 			jsonLoader("http://www.behance.net/v2/projects/"+galleryId+"?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&callback=?", "gallery");//load the current gallery into galleryData on complete go to gallery builder
 		};
 
@@ -208,6 +207,7 @@
 				thumblist=thumblist.concat("</ul>");
 
 				document.getElementById("Design").innerHTML=thumblist;
+				toggleLayer('overlay');
 		};
 
     </script>
