@@ -16,9 +16,8 @@ function jsonLoader(thisURL){
 		  dataType: 'json',
 		  async: false,
 		  data: 'data',
-  		  async: false,
     success: function(data){
-    	json=data
+    	json=data.projects;
     },
     error: function(){
     	alert("error importing www.Behance.net/jphillips01 data.");
@@ -26,11 +25,16 @@ function jsonLoader(thisURL){
     complete: function(){
     	console.log(json);
     	return json;
+    	afterFunction();
     }
 })
 };
 
 console.log(projectsData);
+
+function afterFunction(){
+	console.log(projectsData);
+}
 
 
 </script>
