@@ -14,10 +14,14 @@ $.ajax({
   data: 'data',
   success: function(data) {
   	console.log(data);
-    projectsArray=data.projects;
-    console.log(projectsArray);
+  	defineProjcets(data);
 	}
   });
+
+function desingProjects(data){
+    projectsArray=data.projects;
+    console.log(projectsArray);
+}
 
 console.log("Outside Get function");
 console.log(projectsArray);
