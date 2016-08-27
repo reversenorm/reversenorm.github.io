@@ -150,7 +150,9 @@
 			document.getElementById("behanceGallery").innerHTML=galleryBuilder(galleryId);//parse the gallery data into a html string
 		};
 
-		function galleryBuilder(galleryId){
+		function galleryBuilder(galleryData){
+
+				console.log(galleryData);
 
 			var htmlString="<div class='closeX'><a href='#c' onclick="+'toggleLayer("overlay");'+"align='right'>[X]</a></div><div class='galleryDescription'>";//add in the gallery description section
 
