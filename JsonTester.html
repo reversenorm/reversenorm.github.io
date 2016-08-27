@@ -5,10 +5,11 @@
 
 <script>
 
- var ProjectsURL = "http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&callback=?";//url for json data on behance.
+ var ProjectsURL = "http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?";//url for json data on behance.
+ var behanceProjects=null;
 
 function logResults(json){
-  console.log(json);
+  behanceProjects=json;
 }
 
 $.ajax({
@@ -19,6 +20,7 @@ $.ajax({
   jsonpCallback: "logResults"
 });
 
+console.log(behanceProjects);
 
 </script>
 
