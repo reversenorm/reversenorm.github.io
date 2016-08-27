@@ -19,7 +19,6 @@ function jsonLoader(thisURL){
 		success: function(data){
 			json=data.projects;
 			console.log('success happened at this time');
-			return json;
 		},
 		error: function(){
 			alert("error importing www.Behance.net/jphillips01 data.");
@@ -28,11 +27,13 @@ function jsonLoader(thisURL){
 			console.log("tick");
 			console.log(json);
 		}
-		})(); 
+			   		 });
+			   		 	return json;
+					})(); 
 
 			return BehanceData;
 
-	};//end jsonLoader
+		};//end json loader
 
 console.log("tock");
 console.log(projectsData);
