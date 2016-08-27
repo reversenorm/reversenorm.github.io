@@ -16,8 +16,9 @@
 				        async: false,
 				        global: false,
 				        url:  filePath,
-				        dataType: "json",
-				        success: function (data) {
+				        dataType: "jsonp",
+				        crossDomain: true,
+				        jsonpCallback: function (data) {
 				            json = data;
 				            console.log(json);
 			        }
