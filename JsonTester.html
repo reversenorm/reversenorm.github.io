@@ -6,41 +6,28 @@
 <script>
 
 var projectsURL="http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?";
+var projectsData=null;
 
+function loadVars(){
+$.ajax({
+  url: projectsURL,
+  dataType: 'jsonp',
+  data: 'data',
+  success: function(data) {
+  	console.log(data);
+    projectsData=data.projects;
+    console.log(projectsData);
+	}
+	complete: function() {
+		varsLoaded();
+	}
+  });
 
+};
 
-function jsonLoader(thisURL){
-	var BehanceData = (function () {
-		var json=null;
-			$.ajax({
-			  url: thisURL,
-			  dataType: 'json',
-			  async: true,
-			  data: 'data',
-		success: function(data){
-			json=data.projects;
-			console.log('success happened at this time');
-		},
-		error: function(){
-			alert("error importing www.Behance.net/jphillips01 data.");
-		},
-		complete: function(){
-			console.log("tick");
-			console.log(json);
-		}
-			   		 });
-			   		 	return json;
-					})(); 
-
-			return BehanceData;
-
-		};//end json loader
-
-console.log("tock");
-console.log(var projectsData=jsonLoader(projectsURL));
-
-
-
+function varsLoaded(){
+console.log(projectsData);
+}
 
 </script>
 
