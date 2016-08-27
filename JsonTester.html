@@ -10,11 +10,8 @@ var Projects=null;
 
 var RawData = $.getJSON( projectsURL, function(data) {
 		  console.log( data );
-		  return data;
+		  Projects=data;
 		});
-
-		console.log(RawData);
-		Projects=RawData;
 
 		console.log(Projects);
 
