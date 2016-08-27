@@ -109,31 +109,29 @@
     <script type="text/javascript">
 
 
-        var BehanceProjects = jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?");
+        var BehanceProjects = null;
+
+        jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?", 'projects');
 
    
-        function jsonLoader(filePath){
-
-			var BehanceData = (function () {
-		    	var json = null;
+        function jsonLoader(filePath, nextStep){
 			   		 $.ajax({
 				        'async': false,
 				        'global': false,
 				        'url':  filePath,
 				        'dataType': "json",
 				        'success': function (data) {
-				            json = data;
-			        }
-			   		 });
-			   		 	return json;
-					})(); 
-
-			return BehanceData;
+				            BehanceProjects = data;
+				        },
+					complete: function() {
+						if (nextStep=="projects"){
+							loadThumbs();
+						}
+					}
+ 			 });
 
 		};//end json loader
 
-		console.log("passed json loader");
-		console.log(BehanceProjects);
 
 		function openGallery(galleryId){
 			toggleLayer('overlay');
@@ -199,9 +197,11 @@
 <div id="Design"><!--this is equavalent to the Design ID on the index page and will replace the temporary content when combining elements-->
 	<ul >
 		<script>
-			for (var i=0; i<BehanceProjects["projects"].length; i++ ){
-				document.write("<li class='glowEdges'><a href='#b' onclick='openGallery("+BehanceProjects["projects"][i]["id"]+");'><img src='"+BehanceProjects["projects"][i]["covers"][202]+"'><br/>"+BehanceProjects["projects"][i]["name"]+"</a></li>");//create a list element with each project's cover image and title. link the whole thing with and on click pass to generate and reveal the content of the project.
-			};
+			function loadThumbs(){
+				for (var i=0; i<BehanceProjects["projects"].length; i++ ){
+					document.write("<li class='glowEdges'><a href='#b' onclick='openGallery("+BehanceProjects["projects"][i]["id"]+");'><img src='"+BehanceProjects["projects"][i]["covers"][202]+"'><br/>"+BehanceProjects["projects"][i]["name"]+"</a></li>");//create a list element with each project's cover image and title. link the whole thing with and on click pass to generate and reveal the content of the project.
+				};
+		};
 		</script>
 	</ul>
 </div><br /><br />
