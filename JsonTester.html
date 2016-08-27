@@ -5,7 +5,7 @@
 
 <script>
 
-var behanceProjects=jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=?");
+var behanceProjects=jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&&per_page=25&callback=logResults");
 
 
 function jsonLoader (ProjectsURL){
@@ -15,7 +15,6 @@ function jsonLoader (ProjectsURL){
 			  global: true,
 			  crossDomain: true,
 			  dataType: "jsonp",
-			  jsonpCallback: "logResults"
 			});
 		};
 
