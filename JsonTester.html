@@ -9,19 +9,17 @@ var projectsURL="http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZS
 var projectsData=null;
 
 $.ajax({
-  url: "/BehanceJSON/jphillips01_projects.json",
+  url: projectsURL,
   dataType: 'json',
   async: false,
   data: 'data',
   success: function(data) {
   	console.log(data);
     projectsData=JSON.stringify(data.projects);
-    console.log(projectsData);
+    document.write(projectsData);
 	}
   });
 
-console.log("*************Outside Get function*****************");
-console.log(projectsData);
 
 
 </script>
