@@ -16,15 +16,19 @@ function jsonLoader(filePath){
 				        'async': false,
 				        'global': false,
 				        'url':  filePath,
-				        'dataType': "json",
-				        'success': function (data) {
-				            json = data;
+				        'crossDomain':true
+				        'dataType': "jsonp",
+				        'callback': function (data) {
+				            json = data.projects;
+				            console.log(json);
 			        }
 			   		 });
 			   		 	return json;
+			   		 	 console.log(json);
 					})(); 
 
 			return BehanceData;
+			 console.log(BehanceData);
 
 		};//end json loader
 
