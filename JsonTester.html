@@ -11,18 +11,12 @@ var Projects=null;
 var RawData = $.getJSON( projectsURL, function(data) {
 		  console.log( data );
 		  return data;
-		})
+		});
 
-	    .done(function() {
-		    Projects=RawData;
-		    console.log(Projects);
-	    })
-	    .fail(function() {
-	    console.log( "error" );
-	    })
-	    .always(function() {
-	    console.log( "complete" );
-	    });
+		console.log(RawData);
+		Projects=RawData;
+
+		console.log(Projects);
 
 
 </script>
