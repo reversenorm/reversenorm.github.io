@@ -10,11 +10,9 @@ var projectsData=jsonLoader(projectsURL);
 
 
 function jsonLoader(thisURL){
-	var json=null;
-		$.ajax({
+	var json=$.ajax({
 		  url: thisURL,
-		  dataType: 'json',
-		  async: false,
+		  dataType: 'jsonp',
 		  data: 'data',
     success: function(data){
     	json=data.projects;
@@ -26,13 +24,18 @@ function jsonLoader(thisURL){
     complete: function(){
     	console.log("tick");
     	console.log(json);
+    	tock();
 
-    }
-})
+    	}
+	})
 };
 
+
+function tock(){
 console.log("tock");
 console.log(projectsData);
+
+};
 
 
 
