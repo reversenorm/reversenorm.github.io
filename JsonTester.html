@@ -16,8 +16,8 @@ function jsonLoader(filePath){
 				        'async': false,
 				        'global': false,
 				        'url':  filePath,
-				        'crossDomain':true
-				        'dataType': "json",
+				        'crossDomain':true,
+				        'dataType': "jsonp",
 				        'jsonpCallback': function (data) {
 				            json = data.projects;
 				            console.log(json);
