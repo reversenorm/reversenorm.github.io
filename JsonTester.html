@@ -18,17 +18,13 @@
 				        'url':  filePath,
 				        'dataType': "json",
 				        'crossDomain':true,
-				        'success': function (data) {
+				        'callback': function (data) {
 				            json = data;
-				            console.log(data);
+				            console.log(json);
 			        }
 			   		 });	
-			   		 	console.log("at return 1");
-			   		 	console.log(json);
 			   		 	return json;
 					})(); 
-					console.log("at return 2");
-			   		 	console.log(BehanceData);
 			return BehanceData;
 
 		};//end json loader
