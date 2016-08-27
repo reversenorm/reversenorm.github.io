@@ -21,10 +21,10 @@ function jsonLoader(filePath){
 				        'success': function (data) {
 				            json = data.projects;
 				            console.log(json);
-			        }
+				            return json;
+			        		}
 			   		 });
-			   		 	return json;
-			   		 	 console.log(json);
+
 					})(); 
 
 			return BehanceData;
