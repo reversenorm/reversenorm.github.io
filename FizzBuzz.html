@@ -2,14 +2,54 @@
 <html>
 <head>
 <title>Code Examples</title>
+ <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
+<style>
+
+body {
+     background-color: #000000;
+     color:#000000;
+     font-family: "Roboto", Arial, sans-serif;
+     font-weight: 300;
+     font-size:10pt;
+     margin:20px:;
+}
+
+#Explination{
+	width:80%;
+}
+
+#Form{
+	position:relative;
+	float:left;
+	width:30%;
+	border-style: thin;
+	background-color: #dddddd;
+}
+
+#output{
+	position:relative;
+	float:right;
+	width:50%;
+	border-style: thin;
+	overflow-y:scroll;
+	overflow-x:hidden;
+	background-color: #dddddd;
+}
+
+
+
+</style>
 
 </head>
 
 		<body>
 
+<div id="Explination">
 		This is a simple FizzBuzz example. The game is to write out every number between 0 and some upper value but when you get to a specified multiple of 3 it prints out Fizz and when you get to a Multiple of 5 it prints out Buzz. And when the value is a multiple of both 3 and 5 it will print out FizzBuzz. This little example allows you to choose the relevent multiples as well as the upper limit of the set of numbers to check (within reason).<br />
 
-<div>
+		</div>
+
+<div id="Form">
 	<form id="fizzbuzz">
 	  Fizz Multiple: <input type="number" name="fizz" value="3"><br>
 	  Buzz Multiple: <input type="number" name="buzz" value="5"><br>
@@ -36,7 +76,7 @@ function FizzBuzzFunction() {
     	StringOutput += "<br />";
 
     	if ((i%fizz)===0){
-    		StringOutput += "fizz";
+    		StringOutput += "Fizz";
     	};
 
     	if ((i%buzz)===0){
