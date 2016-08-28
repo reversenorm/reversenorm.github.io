@@ -32,18 +32,18 @@ function FizzBuzzFunction() {
 
 
     for (var i = 0; i <= TotalCheck ;i++){
-    	document.write("<br />");
+    	document.getElementById("output").write("<br />");
 
     	if ((i%fizz)===0){
-    		document.write("fizz");
+    		document.getElementById("output").write("fizz");
     	};
 
     	if ((i%buzz)===0){
-    		document.write("Buzz");
+    		document.getElementById("output").write("Buzz");
     	};
 
     	if ((i%fizz)!=0 && (i%buzz)!=0){
-    		document.write(i);
+    		document.getElementById("output").write(i);
     	};
 
     };
