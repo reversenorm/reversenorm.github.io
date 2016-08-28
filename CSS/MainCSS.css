@@ -75,11 +75,11 @@ a{
     width: 400px;
     height: 50px;
 
-    clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-    -webkit-clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-    -moz-clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-    -ms-clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-    -o-clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
+    clip-path: polygon(0px 50px, 400px 50px, 300px 0px, 0px 0px);
+    -webkit-clip-path: polygon(0px 50px, 400px 50px, 300px 0px, 0px 0px);
+    -moz-clip-path: polygon(0px 50px, 400px 50px, 300px 0px, 0px 0px);
+    -ms-clip-path: polygon(0px 50px, 400px 50px, 300px 0px, 0px 0px);
+    -o-clip-path: polygon(0px 50px, 400px 50px, 300px 0px, 0px 0px);
 
 }
 
