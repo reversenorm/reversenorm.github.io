@@ -27,31 +27,24 @@ function FizzBuzzFunction() {
     var fizz = x.elements[0].value;
     var buzz = x.elements[1].value;
     var TotalCheck = x.elements[2].value;
-    var HTMLString="";
 
 
     for (var i = 0; i <= TotalCheck ;i++){
-    	HTMLString=HTMLString.concat("<br />");
 
     	if ((i%fizz)===0){
-    		HTMLString=HTMLString.concat("Fizz");
+    		console.log("fizz");
     	};
 
     	if ((i%Buzz)===0){
-    		HTMLString=HTMLString.concat("Buzz");
+    		console.log("Buzz");
     	};
 
     	if ((i%fizz)!=0 && (i%Buzz)!=0){
-    		HTMLString=HTMLString.concat(i);
+    		console.log(i);
     	};
 
     };
 
-    document.getElementById("output").innerHTML = HTMLString;
-
-    // document.write("Fizz is "+fizz);
-    // document.write("Buzz is "+buzz);
-    // document.write("Total to Check is "+TotalCheck);
 };
 </script>
 
