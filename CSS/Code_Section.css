@@ -1,0 +1,32 @@
+#CodeDisplay{
+	  position: relative;
+	  width: 76%;
+	  left:12%;
+	  z-index: 20;
+	  height:95%;
+	  overflow-y:scroll;
+	  overflow-x: hidden;
+	  background-color: #ffffff;
+	  margin:20px;
+	  text-align: center;
+
+	}
+	
+	
+	#Code{
+		overflow:scroll;
+	}
+	#Code li{
+		padding:10px 10px 5px 10px;
+		margin:15px;/*this is on all sides double between elements*/
+		text-align: center;
+		position:relative;
+		float:left;
+		list-style-type: none;
+		vertical-align: middle;
+
+		width: 200px; 
+		height: 150px; 
+		
+
+	}
