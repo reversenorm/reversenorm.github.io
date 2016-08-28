@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Code Examples</title>
+
+</head>
+
+		<body>
+
+		This is a simple FizzBuzz example. The game is to write out every number between 0 and some upper value but when you get to a specified multiple of 3 it prints out Fizz and when you get to a Multiple of 5 it prints out Buzz. And when the value is a multiple of both 3 and 5 it will print out FizzBuzz. This little example allows you to choose the relevent multiples as well as the upper limit of the set of numbers to check (within reason).
+
+	<form id="fizzbuzz">
+	  Fizz Multiple: <input type="number" name="fizz" value="3"><br>
+	  Buzz Multiple: <input type="number" name="buzz" value="5"><br>
+	  Value to Check: <input type="number" name="TotalCheck" value="30"><br />
+	</form>
+
+
+<button onclick="FizzBuzzFunction()">Find Fizz and Buzz</button> <br />
+
+<div id="output">
+
+<script type="text/javascript">
+
+function FizzBuzzFunction() {
+    var x = document.getElementById("fizzbuzz");
+    var fizz = x.elements[0].value;
+    var buzz = x.elements[1].value;
+    var TotalCheck = x.elements[2].value;
+
+
+    for (var i = 0; i <= TotalCheck ;i++){
+    	document.write("<br />");//add a return to start next line
+
+    	if ((i%fizz)===0){
+    		document.write("Fizz");
+    	}
+
+    	if ((i%Buzz)===0){
+    		document.write("Buzz");
+    	}
+
+    	if ((i%fizz)!=0 && (i%Buzz)!=0){
+    		document.write(i);
+    	}
+
+    }
+
+    // document.write("Fizz is "+fizz);
+    // document.write("Buzz is "+buzz);
+    // document.write("Total to Check is "+TotalCheck);
+};
+</script>
+
+</div>
+
+		</body>
+
+
+</html>
