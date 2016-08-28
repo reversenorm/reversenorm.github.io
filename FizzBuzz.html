@@ -18,7 +18,7 @@
 
 <button onclick="FizzBuzzFunction()">Find Fizz and Buzz</button> <br />
 
-<div id="output">
+<div id="output"></div>div>
 
 <script type="text/javascript">
 
@@ -27,24 +27,27 @@ function FizzBuzzFunction() {
     var fizz = x.elements[0].value;
     var buzz = x.elements[1].value;
     var TotalCheck = x.elements[2].value;
+    var HTMLString="";
 
 
     for (var i = 0; i <= TotalCheck ;i++){
-    	document.write("<br />");//add a return to start next line
+    	HTMLString=HTMLString.concat("<br />");
 
     	if ((i%fizz)===0){
-    		document.write("Fizz");
+    		HTMLString=HTMLString.concat("Fizz");
     	};
 
     	if ((i%Buzz)===0){
-    		document.write("Buzz");
+    		HTMLString=HTMLString.concat("Buzz");
     	};
 
     	if ((i%fizz)!=0 && (i%Buzz)!=0){
-    		document.write(i);
+    		HTMLString=HTMLString.concat(i);
     	};
 
     };
+
+    document.getElementById("output").innerHTML = HTMLString;
 
     // document.write("Fizz is "+fizz);
     // document.write("Buzz is "+buzz);
@@ -52,7 +55,6 @@ function FizzBuzzFunction() {
 };
 </script>
 
-</div>
 
 		</body>
 
