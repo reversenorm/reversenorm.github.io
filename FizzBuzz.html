@@ -20,7 +20,7 @@
 
 <button onclick="FizzBuzzFunction()">Find Fizz and Buzz</button> <br />
 
-<div id="output"></div>
+<div id="output">
 
 <script type="text/javascript">
 
@@ -32,24 +32,26 @@ function FizzBuzzFunction() {
 
 
     for (var i = 0; i <= TotalCheck ;i++){
-    	document.getElementById("output").write("<br />");
+    	document.write("<br />");
 
     	if ((i%fizz)===0){
-    		document.getElementById("output").write("fizz");
+    		document.write("fizz");
     	};
 
     	if ((i%buzz)===0){
-    		document.getElementById("output").write("Buzz");
+    		document.write("Buzz");
     	};
 
     	if ((i%fizz)!=0 && (i%buzz)!=0){
-    		document.getElementById("output").write(i);
+    		document.write(i);
     	};
 
     };
 
 };
 </script>
+
+</div>
 
 
 		</body>
