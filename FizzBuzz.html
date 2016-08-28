@@ -26,6 +26,7 @@ body {
 	background-color: #dddddd;
 	height:300px;
 	margin:20px;
+	padding:10px;
 }
 
 #output{
@@ -39,6 +40,7 @@ body {
 	background-color: #dddddd;
 	height:300px;
 	margin:20px;
+	padding:10px;
 }
 
 
@@ -72,32 +74,40 @@ body {
 function FizzBuzzFunction() {
 
 
+
     var x = document.getElementById("fizzbuzz");
     var fizz = x.elements[0].value;
     var buzz = x.elements[1].value;
     var TotalCheck = x.elements[2].value;
     var StringOutput="Output:";
 
+    if (TotalCheck<=1000){
 
-    for (var i = 0; i <= TotalCheck ;i++){
-    	StringOutput += "<br />";
 
-    	if ((i%fizz)===0){
-    		StringOutput += "Fizz";
-    	};
+	    for (var i = 0; i <= TotalCheck ;i++){
+	    	StringOutput += "<br />";
 
-    	if ((i%buzz)===0){
-    		StringOutput += "Buzz";
-    	};
+	    	if ((i%fizz)===0){
+	    		StringOutput += "Fizz";
+	    	};
 
-    	if ((i%fizz)!=0 && (i%buzz)!=0){
-    		StringOutput += i;
-    	};
+	    	if ((i%buzz)===0){
+	    		StringOutput += "Buzz";
+	    	};
 
-    };
+	    	if ((i%fizz)!=0 && (i%buzz)!=0){
+	    		StringOutput += i;
+	    	};
 
-    document.getElementById("output").innerHTML = StringOutput;
+	    };
 
+	    document.getElementById("output").innerHTML = StringOutput;
+
+	}else{
+
+		document.getElementById("output").innerHTML = 'Output:<br />Please Keep "Value to Check" 1000 or less.';
+
+	};
 
 };
 
