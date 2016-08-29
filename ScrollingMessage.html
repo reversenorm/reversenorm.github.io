@@ -159,7 +159,7 @@ function LoadMessage() {
     					var thisColumn=k;
 
     					if(CharSet[thisCharacter][thisColumn][thisRow]==0){
-    					OutputString+=" ";//if binary is 0 insert a non-collapsing space
+    					OutputString+="&nbsp;";//if binary is 0 insert a non-collapsing space
     					}else{
     					OutputString+=DotType;//if not zero insert a dot from the type selected
     					}
@@ -170,10 +170,7 @@ function LoadMessage() {
 
     }
 
-    console.log(OutputString);
-
-    
-
+    document.getElementById("output").innerHTML = OutputString;
 
 
 };
