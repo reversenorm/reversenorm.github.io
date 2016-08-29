@@ -3,9 +3,6 @@
         var BehanceProjects = null;
         var galleryData=null;
 
-        jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&per_page=25&callback=?", 'projects');
-
-   
         function jsonLoader(filePath, nextStep){
 			   		 $.ajax({
 				        'global': false,
@@ -102,3 +99,7 @@
 				document.getElementById("Design").innerHTML=thumblist;
 				
 		};
+		
+  jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&per_page=25&callback=?", 'projects'); 
+
+   
