@@ -354,8 +354,8 @@ ported from other sites. Also will have near clouds image at base */
    	visibility:none;
    }
    
-   .menu li a{
-   	margin:20px 0px 0px 0px;
+   #menu ul li a {
+   	margin:15px 0px 0px 0px;
    	padding:10px;
    }
 }
