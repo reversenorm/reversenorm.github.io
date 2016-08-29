@@ -86,7 +86,7 @@ var EightBinary=[[0,1,0,0,1,0,0,1,0],[0,1,0,0,1,0,0,1,0],[0,1,0,0,1,0,0,1,0],[0,
 var NineBinary=[[0,0,0,0,0,1,1,0,0],[0,1,0,0,1,0,0,1,0],[0,1,0,0,1,0,0,1,0],[0,1,0,0,1,0,0,1,0],[0,0,1,1,1,1,1,0,0],[0,0,0,0,0,0,0,0,0]];
 var SpaceBinary=[[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0]]; 
 
-var CharSet={A:ABinary, B:BBinary, C:CBinary, D:DBinary, E:EBinary, F:FBinary, G:GBinary, H:HBinary, I:IBinary, J:JBinary, K:KBinary, L:LBinary, M:MBinary, N:NBinary, O:OBinary, P:PBinary, Q:QBinary, R:RBinary, S:SBinary, T:TBinary, U:UBinary, V:VBinary, W:WBinary, X:XBinary, Y:YBinary, Z:ZBinary, 0:ZeroBinary, 1:OneBinary, 2:TwoBinary, 3:ThreeBinary, 4:FourBinary, 5:FiveBinary, 6:SixBinary, 7:SevenBinary, 8:EightBinary, 9:NineBinary, " ":SpaceBinary};
+var CharSet={A:ABinary, B:BBinary, C:CBinary, D:DBinary, E:EBinary, F:FBinary, G:GBinary, H:HBinary, I:IBinary, J:JBinary, K:KBinary, L:LBinary, M:MBinary, N:NBinary, O:OBinary, P:PBinary, Q:QBinary, R:RBinary, S:SBinary, T:TBinary, U:UBinary, V:VBinary, W:WBinary, X:XBinary, Y:YBinary, Z:ZBinary, 0:ZeroBinary, 1:OneBinary, 2:TwoBinary, 3:ThreeBinary, 4:FourBinary, 5:FiveBinary, 6:SixBinary, 7:SevenBinary, 8:EightBinary, 9:NineBinary, " ":SpaceBinary};//CharSet is an object contaning a named value for each caracter. With in each character is a 2D array of 5+1 columns each 7 high. This creates 5X7 characters with an automatic space between after.
 
 
 </script>
@@ -135,22 +135,44 @@ function LoadMessage() {
     var DotType= x.elements[1].value;
     var DotColor=x.elements[2].value;
     var AllowedCharacters=true;
+    var OutputString="";
     
     var MessageArray=[];
 
     for(var i=0; i<MessageString.length; i++){
 
-    		AllowedCharacters=checkValid(MessageString.charAt(i));
-
-	    	if(AllowedCharacters){
+    		AllowedCharacters=checkValid(MessageString.charAt(i));//check if this particular character matches any of the allowable characters.
+	    	if(AllowedCharacters){//if it matched any of the characters push to an array
 	    	MessageArray.push(MessageString.charAt(i));
 	    	}else{
-	    	alert("Please only use A-Z and 0-9");
+	    	alert("Please only use A-Z and 0-9");//alert user and exit the loop
 	    	break;
 	  		};
     };
 
-    console.log(MessageArray);
+    for (var i=0; i<7; i++){//repeat this for each Row of the entire string.
+
+    		for (var j=0; j<MessageArray.length; j++){//do each letter's row
+    			var thisCharacter=MessageArray[j];
+    			var thisRow=i;
+    				for (var k=0; k<6; k++){ //each letters column by column this allows for each row to be a continious string
+    					var thisColumn=k;
+
+    					if(CharSet[thisCharacter][ThisColumn][thisRow]==0){
+    					OutputString+=" ";//if binary is 0 insert a non-collapsing space
+    					}else{
+    					OutputString+=DotType;//if not zero insert a dot from the type selected
+    					}
+    			}
+
+    		}
+    		OutputString+="<br/>";//at the end of the row add in a return
+
+    }
+
+    console.log(OutputString);
+
+    
 
 
 
