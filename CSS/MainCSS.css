@@ -353,6 +353,11 @@ ported from other sites. Also will have near clouds image at base */
    	display:none;
    	visibility:none;
    }
+   
+   .menu li{
+   	margin:15px 0px 0px 0px;
+   	padding:5px;
+   }
 }
 
 
