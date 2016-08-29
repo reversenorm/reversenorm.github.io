@@ -40,23 +40,6 @@
  
  <!-- Include Javascripts --><!-- Include Javascripts --><!-- Include Javascripts -->
 
-<script>
-function CSSSupportedCheck(){
-	if(!("clipPath" in document.body.style)){//detect if the clip-path is NOT supported
-		for(var i=0; i<document.getElementsByClassName("titleEdge"); i++){
-		document.getElementsByClassName("titleEdge")[i].className += " isHidden";//add isHidden class to all title edges
-		};
-		
-		for(var i=0; i<document.getElementsByClassName("menuEdge"); i++){
-		document.getElementsByClassName("menuEdge")[i].className += " isHidden";//add isHidden class to all menu edges
-		};
-   
-	};
-}
-
-</script>
-
-
 </head>
 
 <body>
@@ -173,8 +156,5 @@ function CSSSupportedCheck(){
 	
 </body>
 
-<script>
-	CSSSupportedCheck();
-</script>
 
 </html>
