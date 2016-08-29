@@ -43,7 +43,7 @@
  <!-- Include Javascripts --><!-- Include Javascripts --><!-- Include Javascripts -->
 
 <script>
-	if(!("clipPath" in document.getElementsByClassName("title")[0].style)){//detect if the clip-path is NOT supported
+	if(!("clipPath" in document.body.style)){//detect if the clip-path is NOT supported
 		for(var i=0; i<document.getElementsByClassName("titleEdge"); i++){
 		document.getElementsByClassName("titleEdge")[i].className += " isHidden";//add isHidden class to all title edges
 		}
@@ -169,7 +169,7 @@
     <script src="reversenorm.github.io/Javascript/scrollingAnimation.js"></script>
     <script src="reversenorm.github.io/Javascript/ToggleVisibility.js"></script>
     <script>
-    	console.log(document.getElementsByClassName("title")[0].style);
+    	console.log(document.body.style);
     </script>
     
 </body>
