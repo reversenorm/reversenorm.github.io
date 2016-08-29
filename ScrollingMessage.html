@@ -44,8 +44,6 @@ body {
 
 .pixel{
 	width:10px;
-	position:relative;
-	float:left;
 }
 
 
@@ -167,7 +165,7 @@ function LoadMessage() {
     					if(CharSet[thisCharacter][thisColumn][thisRow]==0){
     					OutputString+="<div class='pixel'>&nbsp;</div>";//if binary is 0 insert a non-collapsing space
     					}else{
-    					OutputString+="<div class='pixel'>"+DotType;"</div>"//if not zero insert a dot from the type selected
+    					OutputString+="<div class='pixel'>"+DotType"</div>";//if not zero insert a dot from the type selected
     					}
     			}
 
