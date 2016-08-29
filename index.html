@@ -32,6 +32,19 @@
 
 <!-- Link CSS  --><!-- Link CSS  --><!-- Link CSS  --><!-- Link CSS  -->
 
+<script>
+//if the CSS clip-path feature is not supported go turn off all the angled edge objects.
+if (document.getElementsByClassName("title")[0].style.clipPath === "") {
+	for(var i=0;i<document.getElementsByClassName("titleEdge").length; i++){
+		document.getElementsByClassName("titleEdge")[0].style.display="none";
+	};
+	
+	for(var i=0;i<document.getElementsByClassName("menuEdge").length; i++){
+		document.getElementsByClassName("menuEdge")[0].style.display="none";
+	};
+};
+</script>
+
 <!-- Include Javascripts --><!-- Include Javascripts --><!-- Include Javascripts -->
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
