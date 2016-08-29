@@ -46,6 +46,11 @@ a{
         top:3.5%;
         left:86%;
     }
+    
+    .isHidden{
+    	display:none;
+    	visibility:none;
+    }
 
 
  /*____END  overlay darken for light box effect on galleries_______*/
