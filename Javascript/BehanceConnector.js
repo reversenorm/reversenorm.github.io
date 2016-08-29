@@ -94,7 +94,7 @@
 		function loadThumbs(){
 				var thumblist="<ul>";
 				for (var i=0; i<BehanceProjects["projects"].length; i++ ){
-					thumblist=thumblist.concat("<li class='glowEdges'><a href='#b' onclick='openGallery("+BehanceProjects["projects"][i]["id"]+");'><img src='"+BehanceProjects["projects"][i]["covers"][202]+"'><br/>"+BehanceProjects["projects"][i]["name"]+"</a></li>");//create a list element with each project's cover image and title. link the whole thing with and on click pass to generate and reveal the content of the project.
+					thumblist=thumblist.concat("<li><a href='#b' onclick='openGallery("+BehanceProjects["projects"][i]["id"]+");'><img class='glowEdges' src='"+BehanceProjects["projects"][i]["covers"][202]+"'><br/>"+BehanceProjects["projects"][i]["name"]+"</a></li>");//create a list element with each project's cover image and title. link the whole thing with and on click pass to generate and reveal the content of the project.
 				};
 
 				thumblist=thumblist.concat("</ul>");
