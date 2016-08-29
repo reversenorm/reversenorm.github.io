@@ -42,6 +42,7 @@
  <!-- Include Javascripts --><!-- Include Javascripts --><!-- Include Javascripts -->
 
 <script>
+function CSSSupportCheck(){
 	if(!("clipPath" in document.body.style)){//detect if the clip-path is NOT supported
 		for(var i=0; i<document.getElementsByClassName("titleEdge"); i++){
 		document.getElementsByClassName("titleEdge")[i].className += " isHidden";//add isHidden class to all title edges
@@ -54,12 +55,13 @@
 	};
 	
 		console.log(document.body.style);
+}
 </script>
 
 
 </head>
 
-<body>
+<body onload="CSSSupportCheck();">
     <div id="parallaxFar">
         <img src="Images/Far.png">
     </div>
