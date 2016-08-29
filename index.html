@@ -32,6 +32,19 @@
 
 <!-- Link CSS  --><!-- Link CSS  --><!-- Link CSS  --><!-- Link CSS  -->
 
+<script>
+	if(!("clipPath" in document.getElementsByClassName("title")[0].style)){//detect if the clip-path is NOT supported
+		for(var i=0; i<document.getElementsByClassName("titleEdge"); i++){
+		document.getElementsByClassName("titleEdge")[i].className += " isHidden";//add isHidden class to all title edges
+		}
+		
+		for(var i=0; i<document.getElementsByClassName("menuEdge"); i++){
+		document.getElementsByClassName("menuEdge")[i].className += " isHidden";//add isHidden class to all menu edges
+		}
+   
+	}
+</script>
+
 <!-- Include Javascripts --><!-- Include Javascripts --><!-- Include Javascripts -->
 
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
