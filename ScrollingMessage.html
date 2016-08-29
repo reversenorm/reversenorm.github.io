@@ -1,7 +1,18 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Dot Matrix Scroller</title>
+<title>Dot Matrix Printer</title>
+<!--
+
+****  ***** *****       *   *  ***  ***** ****    *   *   *       ****  ****    *   *   * ***** ***** ****  
+ *  * *   *   *         ** ** *   *   *    *  *   *   *   *        *  *  *  *   *   **  *   *   *      *  * 
+ *  * *   *   *         ***** *   *   *    *  *   *    ***         *  *  *  *   *   *** *   *   *      *  * 
+ *  * *   *   *         * * * *****   *    ***    *     *          ***   ***    *   * * *   *   ****   ***  
+ *  * *   *   *         *   * *   *   *    **     *    ***         *     **     *   * ***   *   *      **   
+ *  * *   *   *         *   * *   *   *    * *    *   *   *        *     * *    *   *  **   *   *      * *  
+****  *****   *         *   * *   *   *    *  *   *   *   *        *     *  *   *   *   *   *   *****  *  * 
+
+-->
  <link href='https://fonts.googleapis.com/css?family=Roboto:400,300,700' rel='stylesheet' type='text/css'>
 <style>
 
@@ -96,7 +107,7 @@ var CharSet={A:ABinary, B:BBinary, C:CBinary, D:DBinary, E:EBinary, F:FBinary, G
 		<body>
 
 <div id="Explination">
-		This is an example of making a scrolling text on a dot matrix. However, unlike LED matricies where the display can rely on persistance of vision this example requires the entire character to be stored as a set of 5 columns stacked 7 wide, plus one column for spacing. This creates a 5x7 dot matrix "font". This has been achieved using a 3 dimensional array. Each character has a set of items that reprasent each within it. each column is in turn a binary list of weather that "pixel" is on of off.<br />
+		This is an example of printing out text like a dow matrix printer. However, unlike LED matricies where the display can rely on persistance of vision this example requires the entire character to be stored as a set of 5 columns stacked 7 wide, plus one column for spacing. This creates a 5x7 dot matrix "font". This has been achieved using a 3 dimensional array. Each character has an array consisting of 5 columns. Each column is in turn a binary array of weather that "pixel" is on of off. Next the input string is parsed and compaired to each character in the "font" array. Then each row is read, while jumping between each character so line breaks only happen at the end of the row. This has the advantage that if you want to copy and paste the phrase you can do so directly without any ordering issues. This can be seen in the comment of the source code for this page. <br />
 
 		</div>
 
