@@ -32,29 +32,6 @@
 
 <!-- Link CSS  --><!-- Link CSS  --><!-- Link CSS  --><!-- Link CSS  -->
 
-
-<!-- Include Javascripts --><!-- Include Javascripts --><!-- Include Javascripts -->
-
-     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="reversenorm.github.io/Javascript/prefixfree.min.js"></script>
-    <script src="reversenorm.github.io/Javascript/BehanceConnector.js"></script><!--Ports data from saved json files and builds lightbox gallery on click-->
-    <script src="reversenorm.github.io/Javascript/deviantArtConnector.js"></script><!--Ports data from deviantart site directly using RSS XML feed-->
- 
- <!-- Include Javascripts --><!-- Include Javascripts --><!-- Include Javascripts -->
-
-<script>
-	if(!("clipPath" in document.body.style)){//detect if the clip-path is NOT supported
-		for(var i=0; i<document.getElementsByClassName("titleEdge"); i++){
-		document.getElementsByClassName("titleEdge")[i].className += " isHidden";//add isHidden class to all title edges
-		}
-		
-		for(var i=0; i<document.getElementsByClassName("menuEdge"); i++){
-		document.getElementsByClassName("menuEdge")[i].className += " isHidden";//add isHidden class to all menu edges
-		}
-   
-	}
-</script>
-
 </head>
 
 <body>
@@ -169,9 +146,30 @@
     <script src="reversenorm.github.io/Javascript/scrollingAnimation.js"></script>
     <script src="reversenorm.github.io/Javascript/ToggleVisibility.js"></script>
     
-    <script>
-    	console.log(document.body.style);
-    </script>
+    <!-- Include Javascripts --><!-- Include Javascripts --><!-- Include Javascripts -->
+
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="reversenorm.github.io/Javascript/prefixfree.min.js"></script>
+    <script src="reversenorm.github.io/Javascript/BehanceConnector.js"></script><!--Ports data from saved json files and builds lightbox gallery on click-->
+    <script src="reversenorm.github.io/Javascript/deviantArtConnector.js"></script><!--Ports data from deviantart site directly using RSS XML feed-->
+ 
+ <!-- Include Javascripts --><!-- Include Javascripts --><!-- Include Javascripts -->
+
+<script>
+	if(!("clipPath" in document.body.style)){//detect if the clip-path is NOT supported
+		for(var i=0; i<document.getElementsByClassName("titleEdge"); i++){
+		document.getElementsByClassName("titleEdge")[i].className += " isHidden";//add isHidden class to all title edges
+		};
+		
+		for(var i=0; i<document.getElementsByClassName("menuEdge"); i++){
+		document.getElementsByClassName("menuEdge")[i].className += " isHidden";//add isHidden class to all menu edges
+		};
+   
+	};
+	
+		console.log(document.body.style);
+</script>
+
 
 </body>
 
