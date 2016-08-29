@@ -163,9 +163,9 @@ function LoadMessage() {
     					var thisColumn=k;
 
     					if(CharSet[thisCharacter][thisColumn][thisRow]==0){
-    					OutputString+="<span class='pixel'>&nbsp;</span>";//if binary is 0 insert a non-collapsing space
+    					OutputString+="<div class='pixel'>&nbsp;</div>";//if binary is 0 insert a non-collapsing space
     					}else{
-    					OutputString+="<span class='pixel'>"+DotType;"</span>"//if not zero insert a dot from the type selected
+    					OutputString+="<div class='pixel'>"+DotType;"</div>"//if not zero insert a dot from the type selected
     					}
     			}
 
