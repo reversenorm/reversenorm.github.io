@@ -24,7 +24,7 @@ body {
 	border-style: medium;
 	border-color: #000000;
 	background-color: #dddddd;
-	height:150px;
+	height:100px;
 	margin:20px;
 	padding:10px;
 }
@@ -137,9 +137,15 @@ function LoadMessage() {
     var DotType= x.elements[1].value;
     var DotColor=x.elements[2].value;
     var AllowedCharacters=true;
+    var ReasonableLength=true;
     var OutputString="";
     
     var MessageArray=[];
+
+    if(MessageString.length>50){
+    	ReasonableLength=false;
+    	alert("That's a lot of characters. Please limit to 50 or less.");
+    }
 
     for(var i=0; i<MessageString.length; i++){
 
@@ -152,6 +158,7 @@ function LoadMessage() {
 	  		};
     };
 
+    if(AllowedCharacters && ReasonableLength){
     for (var i=8; i>-1; i--){//repeat this for each Row of the entire string.
 
     		for (var j=0; j<MessageArray.length; j++){//do each letter's row
@@ -174,6 +181,7 @@ function LoadMessage() {
 
     document.getElementById("output").innerHTML = OutputString;
     document.getElementById("output").style.color = DotColor;
+}
 
 
 };
