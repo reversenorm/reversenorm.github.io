@@ -342,6 +342,20 @@ ported from other sites. Also will have near clouds image at base */
 /*_________END MENU CSS HERE___________*/
 
 
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {  
+   /* IE10+ specific styles go here */  
+   .titleEdge{
+   	display:none;
+   	visibility:none;
+   }
+   
+   .menuEdge{
+   	display:none;
+   	visibility:none;
+   }
+}
+
+
 
 
 
