@@ -100,6 +100,6 @@
 				
 		};
 		
-  jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&per_page=25&callback=?", 'projects'); 
+  window.onload=jsonLoader("http://behance.net/v2/users/jphillips01/projects?api_key=bM1DZSpebEhtZlRUq9QKuUmF3PpdW595&per_page=25&callback=?", 'projects'); 
 
    
