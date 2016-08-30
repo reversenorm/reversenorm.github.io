@@ -38,7 +38,7 @@ function  PositionScrollingImages(WhichImage){
         Layer_Main.style["top"]=(MainHeight-Layer_Main.clientHeight+100)*Rate_Main + "px";
     };
     if(WhichImage="Near"){
-         Layer_Near.style["top"]=(MainHeight-Layer_Near.clientHeight-50)*Rate_Near + "px";
+         Layer_Near.style["top"]=(MainHeight-Layer_Near.clientHeight-200)*Rate_Near + "px";
     };
 
 
