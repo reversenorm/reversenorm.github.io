@@ -31,14 +31,15 @@ function  PositionScrollingImages(WhichImage){
     if (WindowWidth<window.innerHeight){//create adjustment for narrower screens
         if(WhichImage="Sunrise"){
         IsNarrow=200;
-        }
+        };
+        if(WhichImage="Clouds"){
+        IsNarrow=50;
+        };
         if(WhichImage="Near"){
         IsNarrow=125;
-        }
-      
-    }
+        };
+    };
     
-
     document.querySelector("#FooterSpace").style["height"]=(WindowWidth/2)+"px";//footer half the width of the window for scaling the space after the Code section
 
     var MainHeight=document.querySelector("#main").clientHeight;//do this after footer change to get accureate height
