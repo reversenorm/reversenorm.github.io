@@ -358,6 +358,32 @@ ported from other sites. Also will have near clouds image at base */
    }
 }
 
+@supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+/*Catches Safari which also has issues on clip-path*/
+
+.title{/*blank out the clip path because it sort of loads but is broken*/
+	-webkit-clip-path:""; 
+   clip-path:"";
+}
+
+ .titleEdge{
+   	display:none;
+   	visibility:none;
+   }
+   
+   .menuEdge{
+   	display:none;
+   	visibility:none;
+   }
+   
+   #menu ul li a {
+   	margin:15px 0px 0px 0px;
+  	-webkit-clip-path:""; 
+   	clip-path:"";
+   }
+
+}
+
 
 
 
