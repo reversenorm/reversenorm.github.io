@@ -364,6 +364,8 @@ ported from other sites. Also will have near clouds image at base */
 .title{/*blank out the clip path because it sort of loads but is broken*/
 	-webkit-clip-path:""; 
    clip-path:"";
+   clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+   	-webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
 }
 
  .titleEdge{
@@ -374,12 +376,15 @@ ported from other sites. Also will have near clouds image at base */
    .menuEdge{
    	display:none;
    	visibility:none;
+   	
    }
    
    #menu ul li a {
    	margin:15px 0px 0px 0px;
   	-webkit-clip-path:""; 
    	clip-path:"";
+   	clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+   	-webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
    }
 
 }
