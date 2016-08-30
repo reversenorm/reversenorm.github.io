@@ -33,7 +33,7 @@ function  PositionScrollingImages(WhichImage){
         IsNarrow=200;
         }
         if(WhichImage="Near"){
-        IsNarrow=150;
+        IsNarrow=125;
         }
       
     }
