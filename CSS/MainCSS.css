@@ -89,6 +89,9 @@ a{
      -webkit-clip-path: url("#clip-shape"); 
    clip-path: url("#clip-shape");
 
+  -webkit-mask:url(#clip-shape);
+  -webkit-mask-repeat:repeat;
+
 }
 
 .titleEdge{
