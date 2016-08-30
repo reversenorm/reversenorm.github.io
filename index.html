@@ -52,11 +52,11 @@
     </div>
 
     <div id="Sunrise">
-        <img src="Images/Sunrise_Mid.png" onload="PositionScrollingImages('Sunrise');">
+        <img src="Images/Sunrise_Mid.png" >
     </div>
 
     <div id="parallaxMain">
-        <img src="Images/Main.png" onload="PositionScrollingImages('Clouds');">
+        <img src="Images/Main.png">
     </div>
 
     <div id="main">
@@ -117,7 +117,7 @@
     <!--end of main div !-->
 
     <div id="parallaxNear">
-        <img src="Images/Near.png" onload="PositionScrollingImages('Near');">
+        <img src="Images/Near.png">
     </div>
 
     <!--Menu goes at the bottom because it is the topmost element!-->
@@ -153,6 +153,14 @@
 
     <script src="reversenorm.github.io/Javascript/scrollingAnimation.js"></script>
     <script src="reversenorm.github.io/Javascript/ToggleVisibility.js"></script>
+    
+    <script>
+    //position images relatively for scrolling. These are here insetad of inside img onLoad so this fires even if images are cached.
+    window.onload=PositionScrollingImages('Near');
+    window.onload=PositionScrollingImages('Sunrise');
+    window.onload=PositionScrollingImages('Clouds');	
+    
+    </script>
 	
 </body>
 
