@@ -90,7 +90,7 @@ a{
    clip-path: url("#clip-shape");
 
   -webkit-mask:url(#clip-shape);
-  -webkit-mask-repeat:repeat;
+  -webkit-mask-repeat:no-repeat;
 
 }
 
