@@ -26,19 +26,24 @@ var Rate_Near = 1.75;
 function  PositionScrollingImages(WhichImage){
 
     var WindowWidth=window.innerWidth;
+    var IsNarrow=0;
+    
+    if (WindowWidth<window.innerHeight){//create adjustment for narrower screens
+      IsNarrow=100;
+    }
 
-    document.querySelector("#FooterSpace").style["height"]=(WindowWidth/2)+"px";//footer half the width of the window for scaling
+    document.querySelector("#FooterSpace").style["height"]=(WindowWidth/2)+"px";//footer half the width of the window for scaling the space after the Code section
 
     var MainHeight=document.querySelector("#main").clientHeight;//do this after footer change to get accureate height
 
     if(WhichImage="Sunrise"){
-         Layer_Mid_Sunrise.style["top"]=(MainHeight-Layer_Mid_Sunrise.clientHeight)*Rate_Mid_Sunrise + "px";
+         Layer_Mid_Sunrise.style["top"]=(MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise + "px";
     };
     if(WhichImage="Clouds"){
         Layer_Main.style["top"]=(MainHeight-Layer_Main.clientHeight+100)*Rate_Main + "px";
     };
     if(WhichImage="Near"){
-         Layer_Near.style["top"]=(MainHeight-Layer_Near.clientHeight-200)*Rate_Near + "px";
+         Layer_Near.style["top"]=(MainHeight-Layer_Near.clientHeight-200-IsNarrow)*Rate_Near + "px";
     };
 
 
