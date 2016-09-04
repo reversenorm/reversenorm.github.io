@@ -398,7 +398,7 @@ ported from other sites. Also will have near clouds image at base */
 	}
 
 	h1{
-	     font-size:55pt;
+	     font-size:40pt;
 	}
 
 	.title{/*blank out the clip path because it sort of loads but is broken*/
@@ -406,6 +406,8 @@ ported from other sites. Also will have near clouds image at base */
    clip-path:"";
    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
    	-webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+   	height:auto;
+   	width:auto;
 }
 
  .titleEdge{
@@ -425,6 +427,10 @@ ported from other sites. Also will have near clouds image at base */
    	clip-path:"";
    	clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
    	-webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+   }
+
+   #BigTitle{
+   	display:none;
    }
 }
 
