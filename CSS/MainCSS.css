@@ -439,8 +439,8 @@ ported from other sites. Also will have near clouds image at base */
     display:none;
     left:100px;
     top:50px;
-    width:90%;
-    height:90%;
+    width:75%;
+    height:75%;
     overflow-y:scroll;
 
 	}
