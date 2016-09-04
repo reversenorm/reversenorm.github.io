@@ -438,10 +438,9 @@ ported from other sites. Also will have near clouds image at base */
     position:relative;
     display:none;
     left:100px;
-    top:50px;
+    top:-250px;
     width:400%;/*Greater than 100% because position relative.*/
     overflow-y:scroll;
-    overflow-x:hidden;
 
 	}
 }
