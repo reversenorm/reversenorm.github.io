@@ -432,6 +432,17 @@ ported from other sites. Also will have near clouds image at base */
    #BigTitle{
    	display:none;
    }
+
+   #about {
+    color:#000000;
+    position:relative;
+    float:left;
+    display:none;
+    left:50px;
+    top:-150px;
+    width:300%;/*Greater than 100% because position relative.*/
+
+	}
 }
 
 
