@@ -435,13 +435,12 @@ ported from other sites. Also will have near clouds image at base */
    }
 
    #about {
-    position:absolute;
+    position:fixed;
     display:none;
     left:100px;
     top:50px;
-    width:auto;
-    height:150%;
-    min-width: 200%;
+    width:90%;
+    height:90%;
     overflow-y:scroll;
 
 	}
