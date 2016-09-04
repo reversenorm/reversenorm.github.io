@@ -394,11 +394,11 @@ ported from other sites. Also will have near clouds image at base */
 @media all and (max-width: 700px) {
     
     body {
-     font-size:20pt;
+     font-size:18pt;
 	}
 
 	h1{
-	     font-size:40pt;
+	     font-size:30pt;
 	}
 
 	.title{/*blank out the clip path because it sort of loads but is broken*/
@@ -435,12 +435,12 @@ ported from other sites. Also will have near clouds image at base */
 
    #about {
     color:#000000;
-    position:relative;
+    position:absolute;
     float:left;
     display:none;
     left:50px;
-    top:-150px;
-    width:300%;/*Greater than 100% because position relative.*/
+    top:50px;
+    width:90%;/*Greater than 100% because position relative.*/
     overflow-y:scroll;
 
 	}
