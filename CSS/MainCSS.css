@@ -408,6 +408,7 @@ ported from other sites. Also will have near clouds image at base */
    	-webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
    	height:auto;
    	width:auto;
+   	margin:10px;
 }
 
  .titleEdge{
@@ -434,14 +435,13 @@ ported from other sites. Also will have near clouds image at base */
    }
 
    #about {
-    color:#000000;
     position:absolute;
-    float:left;
     display:none;
     left:50px;
     top:50px;
-    width:90%;/*Greater than 100% because position relative.*/
+    width:300%;/*Greater than 100% because position relative.*/
     overflow-y:scroll;
+    overflow-x:hidden;
 
 	}
 }
