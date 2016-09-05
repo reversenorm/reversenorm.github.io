@@ -32,13 +32,8 @@
 
 	#Code li{
 		float:bottom;
-		width: 80%; 
-		height:auto;
-
-		min-height:auto;
-		max-height:auto;
-		max-width:auto;
-		min-width:auto;
+		width: 80% 
+		height: auto; 
 
 		left:0px;
 
