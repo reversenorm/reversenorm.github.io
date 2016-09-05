@@ -55,10 +55,10 @@
 		width: 50%; 
 		height:auto;
 
-		min-height:"";
-		max-height:"";
-		max-width: "";
-		min-width:"";
+		min-height:auto;
+		max-height:auto;
+		max-width:auto;
+		min-width:auto;
 
 		left:0px;
 
