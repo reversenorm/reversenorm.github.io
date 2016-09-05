@@ -48,3 +48,18 @@
 		height:80%;
 	}
 
+@media all and (max-width: 700px) {
+
+	#Design li{
+		float:bottom;
+		width: 80%; 
+		height:auto;
+
+		min-height:"";
+		max-height:"";
+		max-width: "";
+		min-width:"";
+	}
+
+
+}
