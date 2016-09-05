@@ -52,7 +52,7 @@
 
 	#Design li{
 		float:bottom;
-		width: 50%; 
+		width: 80%; 
 		height:auto;
 
 		min-height:auto;
@@ -67,7 +67,7 @@
 	}
 
 		#Design img {/*width flexibility for the linked display images*/
-		width:65%;
+		width:80%;
 		height:auto;
 	}
 
