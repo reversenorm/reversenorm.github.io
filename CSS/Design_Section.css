@@ -67,8 +67,8 @@
 	}
 
 		#Design img {/*width flexibility for the linked display images*/
-		width:auto;
-		height:65%;
+		width:65%;
+		height:auto;
 	}
 
 
