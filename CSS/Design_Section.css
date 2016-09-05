@@ -71,5 +71,15 @@
 		height:auto;
 	}
 
+	#behanceGallery {
+		width: 90%;
+	  left:5%;
+	}
+
+	#behanceGallery img {
+		width:80%;
+		height:auto;
+	}
+
 
 }
