@@ -55,13 +55,15 @@
 		width: 50%; 
 		height:auto;
 
-
 		min-height:150px;
 		max-height:"";
 		max-width: "";
 		min-width:"";
 
 		left:0px;
+
+		padding:2px;
+		margin:2px;/*this is on all sides double between elements*/
 	}
 
 		#Design img {/*width flexibility for the linked display images*/
