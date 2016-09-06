@@ -29,6 +29,13 @@
    	
    }
    
+   .mobingBox{
+   	
+   	width:auto;
+   	max-width:200px;
+   	
+   }
+   
    #menu ul li a {
    	margin:20px 0px 0px 0px;
   	-webkit-clip-path:""; 
