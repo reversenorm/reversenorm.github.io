@@ -71,7 +71,6 @@ function setPosition(WhichImage,IsNarrow){
   
     if(WhichImage=="Sunrise"){
          Layer_Mid_Sunrise.style["top"]=(MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise + "px";
-         console.log(IsNarrow);
     };
     if(WhichImage=="Clouds"){
         Layer_Main.style["top"]=(MainHeight-Layer_Main.clientHeight+100)*Rate_Main + "px";
