@@ -447,8 +447,8 @@ ported from other sites. Also will have near clouds image at base */
 }
 
 
-/* anything less than 700px*/
-@media screen and (max-width: 700px){
+/* Just S3 test*/
+@media only screen and (device-width: 720px) and (device-height: 1280px) and (orientation: portrait) {
     
     body {
      font-size:18pt;
