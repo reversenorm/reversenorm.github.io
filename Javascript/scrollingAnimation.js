@@ -31,7 +31,7 @@ function  PositionScrollingImages(WhichImage){
     if (WindowWidth<window.innerHeight){//create adjustment for narrower screens
         if(WhichImage=="Sunrise"){
             if(WindowWidth<700){//for mobile display
-                 IsNarrow=275;
+                 IsNarrow=250;
                  setPosition("Sunrise",IsNarrow);
              }else{
                  IsNarrow=200;
@@ -46,7 +46,7 @@ function  PositionScrollingImages(WhichImage){
         
       if(WhichImage=="Near"){
             if(WindowWidth<700){
-              IsNarrow=-10;//for mobile display
+              IsNarrow=75;//for mobile display
               setPosition("Near",IsNarrow);
             }else{
                 IsNarrow=125;
@@ -72,7 +72,6 @@ function setPosition(WhichImage,IsNarrow){
     if(WhichImage=="Sunrise"){
          Layer_Mid_Sunrise.style["top"]=(MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise + "px";
          console.log(IsNarrow);
-         console.log((MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise );
     };
     if(WhichImage=="Clouds"){
         Layer_Main.style["top"]=(MainHeight-Layer_Main.clientHeight+100)*Rate_Main + "px";
