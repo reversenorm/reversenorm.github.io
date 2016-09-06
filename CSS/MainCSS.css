@@ -390,7 +390,7 @@ ported from other sites. Also will have near clouds image at base */
 }
 
 
-/* mobile phone Galaxy & HTC*/
+/* mobile phone iPhone*/
 @media only screen and (device-width: 700px){
     
     body {
@@ -446,7 +446,9 @@ ported from other sites. Also will have near clouds image at base */
 	}
 }
 
-@media only screen and (max-device-width: 700px){
+
+/* mobile phone galaxy and HTC*/
+@media screen and (max-device-width: 700px){
     
     body {
      font-size:18pt;
@@ -500,8 +502,4 @@ ported from other sites. Also will have near clouds image at base */
 
 	}
 }
-
-
-
-
 
