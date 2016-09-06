@@ -71,5 +71,20 @@
 		top:95%;
 	}
 
+	#Code li{
+		float:bottom;
+		width: 80%; 
+		height:auto;
+
+		min-height:auto;
+		max-height:auto;
+		max-width:auto;
+		min-width:auto;
+
+		left:0px;
+
+		padding:2px;
+		margin:10px;/*this is on all sides double between elements*/
+	}
 
 
