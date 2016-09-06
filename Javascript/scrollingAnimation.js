@@ -24,6 +24,10 @@ var Rate_Near = 1.75;
 
   //set position of scrollable elements relative to window height.
 function  PositionScrollingImages(WhichImage){
+      
+    document.querySelector("#FooterSpace").style["height"]=(WindowWidth/2)+"px";//footer half the width of the window for scaling the space after the Code section
+
+    var MainHeight=document.querySelector("#main").clientHeight;//do this after footer change to get accureate height
 
     var WindowWidth=window.innerWidth;
     var IsNarrow=0;
@@ -32,36 +36,40 @@ function  PositionScrollingImages(WhichImage){
         if(WhichImage="Sunrise"){
             if(WindowWidth<700){//for mobile display
                  IsNarrow=400;
-                 
+                 setPosition("Sunrise",IsNarrow);
              }else{
                  IsNarrow=200;
-
+                 setPosition("Sunrise",IsNarrow);
              };
        
         };
     if(WhichImage="Clouds"){
         IsNarrow=50;
-
+        setPosition("Clouds",IsNarrow);
       };
         
       if(WhichImage="Near"){
             if(WindowWidth<700){
               IsNarrow=20;//for mobile display
-
+              setPosition("Near",IsNarrow);
             }else{
                 IsNarrow=125;
-                
+                setPosition("Near",IsNarrow);
             };
         };
+        
+    }else{
+      setPosition("Sunrise",0);
+      setPosition("Clouds",0);
+      setPosition("Near",IsNarrow);
     };
     
-    document.querySelector("#FooterSpace").style["height"]=(WindowWidth/2)+"px";//footer half the width of the window for scaling the space after the Code section
+};
 
-    var MainHeight=document.querySelector("#main").clientHeight;//do this after footer change to get accureate height
-
+function setPosition(WhichImage,IsNarrow){
+  
     if(WhichImage="Sunrise"){
          Layer_Mid_Sunrise.style["top"]=(MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise + "px";
-         console.log(IsNarrow);
     };
     if(WhichImage="Clouds"){
         Layer_Main.style["top"]=(MainHeight-Layer_Main.clientHeight+100)*Rate_Main + "px";
@@ -71,7 +79,7 @@ function  PositionScrollingImages(WhichImage){
     };
 
 
-}
+};
 
 var scrolling = false;
 var mouseWheelActive = false;
