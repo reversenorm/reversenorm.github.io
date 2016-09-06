@@ -1,0 +1,51 @@
+  body {
+     font-size:18pt;
+	}
+
+	h1{
+	     font-size:30pt;
+	     max-height: 100px;
+	}
+
+	.title{/*blank out the clip path because it sort of loads but is broken*/
+	-webkit-clip-path:""; 
+   clip-path:"";
+   clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+   	-webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+   	height:auto;
+   	width:auto;
+}
+
+ .titleEdge{
+   	display:none;
+   	visibility:none;
+   }
+   
+   .menuEdge{
+   	display:none;
+   	visibility:none;
+   	
+   }
+   
+   #menu ul li a {
+   	margin:20px 0px 0px 0px;
+  	-webkit-clip-path:""; 
+   	clip-path:"";
+   	clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+   	-webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+   }
+
+   #BigTitle{
+   	display:none;
+   }
+
+   #about {
+    position:fixed;
+    display:none;
+    left:100px;
+    top:50px;
+    width:60%;
+    height:75%;
+    overflow-y:scroll;
+
+	}
