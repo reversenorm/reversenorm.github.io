@@ -39,6 +39,15 @@
    #main{
    	display:visible;
    	width:auto;
+   	max-width:300px;
+   	left:5%;
+   }
+   
+      #footerSpace{
+   	display:visible;
+   	width:auto;
+   	max-width:300px;
+   	left:5%;
    }
    
    #menu ul li a {
