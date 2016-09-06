@@ -92,6 +92,9 @@
 		margin:2px;/*this is on all sides double between elements*/
 	}
 
+	#PreviousArrow, #NextArrow{
+		top:85%;
+	}
 
 
 }
