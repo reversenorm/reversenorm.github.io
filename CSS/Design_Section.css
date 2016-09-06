@@ -85,6 +85,11 @@
 		display:block;
 	}
 
+	#html5-video-holder{
+		width:256px;
+		height:192px;
+	}
+
 
 
 }
