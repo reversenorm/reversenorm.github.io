@@ -36,6 +36,11 @@
    	
    }
    
+   #main{
+   	display:visible;
+   	width:auto;
+   }
+   
    #menu ul li a {
    	margin:20px 0px 0px 0px;
   	-webkit-clip-path:""; 
