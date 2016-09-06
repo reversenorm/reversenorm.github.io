@@ -36,7 +36,11 @@ function  PositionScrollingImages(WhichImage){
         IsNarrow=50;
         };
         if(WhichImage="Near"){
-        IsNarrow=125;
+            if(WindowWidth<700){
+              IsNarrow=50;//for mobile display
+            }else{
+                IsNarrow=125;
+            };
         };
     };
     
