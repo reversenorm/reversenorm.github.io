@@ -31,7 +31,7 @@ function  PositionScrollingImages(WhichImage){
     if (WindowWidth<window.innerHeight){//create adjustment for narrower screens
         if(WhichImage="Sunrise"){
             if(WindowWidth<700){//for mobile display
-                 IsNarrow=300;
+                 IsNarrow=400;
              }else{
                  IsNarrow=200;
              }
@@ -42,7 +42,7 @@ function  PositionScrollingImages(WhichImage){
         };
         if(WhichImage="Near"){
             if(WindowWidth<700){
-              IsNarrow=0;//for mobile display
+              IsNarrow=-50;//for mobile display
             }else{
                 IsNarrow=125;
             };
