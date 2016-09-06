@@ -60,8 +60,8 @@ function  PositionScrollingImages(WhichImage){
     var MainHeight=document.querySelector("#main").clientHeight;//do this after footer change to get accureate height
 
     if(WhichImage="Sunrise"){
-         Layer_Mid_Sunrise.style["top"]=(MainHeight-Layer_Mid_Sunrise.clientHeight)*Rate_Mid_Sunrise+IsNarrow + "px";
-         console.log((MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise+IsNarrow);
+         Layer_Mid_Sunrise.style["top"]=(MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise + "px";
+         console.log(IsNarrow);
     };
     if(WhichImage="Clouds"){
         Layer_Main.style["top"]=(MainHeight-Layer_Main.clientHeight+100)*Rate_Main + "px";
