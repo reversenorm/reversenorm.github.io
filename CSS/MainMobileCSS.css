@@ -15,7 +15,6 @@
    	-webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
    	height:auto;
    	width:auto;
-   	max-width:200px;
 }
 
  .titleEdge{
@@ -31,10 +30,11 @@
    
    .movingBox{
    	width:auto;
+   	display;inline;
    }
    
    #main{
-   	display:visible;
+   	display:inline;
    	width:auto;
    	left:10%;
    }
@@ -46,6 +46,7 @@
    	clip-path:"";
    	clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
    	-webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+   	width:80px;
    }
 
    #BigTitle{
@@ -55,7 +56,7 @@
    #about {
     position:fixed;
     display:none;
-    left:100px;
+    left:80px;
     top:50px;
     width:60%;
     height:75%;
