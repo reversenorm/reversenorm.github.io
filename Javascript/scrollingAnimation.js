@@ -32,20 +32,24 @@ function  PositionScrollingImages(WhichImage){
         if(WhichImage="Sunrise"){
             if(WindowWidth<700){//for mobile display
                  IsNarrow=400;
-                 alert("Is Narrow value for sunrise: "+IsNarrow);
+                 console.log("Is Narrow Sunrise "+IsNarrow);
              }else{
                  IsNarrow=200;
+                 console.log("Is Narrow Sunrise "+IsNarrow);
              }
        
         };
         if(WhichImage="Clouds"){
         IsNarrow=50;
+        console.log("Is Narrow Clouds "+IsNarrow);
         };
         if(WhichImage="Near"){
             if(WindowWidth<700){
               IsNarrow=20;//for mobile display
+              console.log("Is Narrow Near "+IsNarrow);
             }else{
                 IsNarrow=125;
+                console.log("Is Narrow Near "+IsNarrow);
             };
         };
     };
