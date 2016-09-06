@@ -64,7 +64,7 @@ function  PositionScrollingImages(WhichImage){
 
 function setPosition(WhichImage,IsNarrow){
   
-      document.querySelector("#FooterSpace").style["height"]=(WindowWidth/2)+"px";//footer half the width of the window for scaling the space after the Code section
+      document.querySelector("#FooterSpace").style["height"]=((window.innerWidth)/2)+"px";//footer half the width of the window for scaling the space after the Code section
 
      var MainHeight=document.querySelector("#main").clientHeight;//do this after footer change to get accureate height
 
