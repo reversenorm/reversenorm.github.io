@@ -29,7 +29,7 @@ function  PositionScrollingImages(WhichImage){
     var IsNarrow=0;
     
     if (WindowWidth<window.innerHeight){//create adjustment for narrower screens
-        if(WhichImage="Sunrise"){
+        if(WhichImage=="Sunrise"){
             if(WindowWidth<700){//for mobile display
                  IsNarrow=400;
                  setPosition("Sunrise",IsNarrow);
@@ -39,12 +39,12 @@ function  PositionScrollingImages(WhichImage){
              };
        
         };
-    if(WhichImage="Clouds"){
+    if(WhichImage=="Clouds"){
         IsNarrow=50;
         setPosition("Clouds",IsNarrow);
       };
         
-      if(WhichImage="Near"){
+      if(WhichImage=="Near"){
             if(WindowWidth<700){
               IsNarrow=20;//for mobile display
               setPosition("Near",IsNarrow);
@@ -69,15 +69,15 @@ function setPosition(WhichImage,IsNarrow){
      var MainHeight=document.querySelector("#main").clientHeight;//do this after footer change to get accureate height
 
   
-    if(WhichImage="Sunrise"){
+    if(WhichImage=="Sunrise"){
          Layer_Mid_Sunrise.style["top"]=(MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise + "px";
          console.log(IsNarrow);
          console.log((MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise );
     };
-    if(WhichImage="Clouds"){
+    if(WhichImage=="Clouds"){
         Layer_Main.style["top"]=(MainHeight-Layer_Main.clientHeight+100)*Rate_Main + "px";
     };
-    if(WhichImage="Near"){
+    if(WhichImage=="Near"){
          Layer_Near.style["top"]=(MainHeight-Layer_Near.clientHeight-200-IsNarrow)*Rate_Near + "px";
     };
 
