@@ -31,10 +31,10 @@ function  PositionScrollingImages(WhichImage){
     if (WindowWidth<window.innerHeight){//create adjustment for narrower screens
         if(WhichImage="Sunrise"){
             if(WindowWidth<700){//for mobile display
-                 IsNarrow=600;
+                 IsNarrow=400;
                  
              }else{
-                 IsNarrow=400;
+                 IsNarrow=200;
 
              };
        
@@ -60,8 +60,8 @@ function  PositionScrollingImages(WhichImage){
     var MainHeight=document.querySelector("#main").clientHeight;//do this after footer change to get accureate height
 
     if(WhichImage="Sunrise"){
-         Layer_Mid_Sunrise.style["top"]=(MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise + "px";
-         console.log((MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise);
+         Layer_Mid_Sunrise.style["top"]=(MainHeight-Layer_Mid_Sunrise.clientHeight)*Rate_Mid_Sunrise+IsNarrow + "px";
+         console.log((MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise+IsNarrow);
     };
     if(WhichImage="Clouds"){
         Layer_Main.style["top"]=(MainHeight-Layer_Main.clientHeight+100)*Rate_Main + "px";
