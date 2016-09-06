@@ -1,3 +1,4 @@
+  /* Main changes for mobile*/ 
   body {
      font-size:18pt;
 	}
@@ -50,7 +51,7 @@
 
 	}
 	
-
+/* Art section changes for mobile*/ 
 	#Art li{
 		float:bottom;
 		width: 80%; 
@@ -71,6 +72,8 @@
 		top:95%;
 	}
 
+/* Code section changes for mobile*/ 
+
 	#Code li{
 		float:bottom;
 		width: 80%; 
@@ -87,4 +90,44 @@
 		margin:10px;/*this is on all sides double between elements*/
 	}
 
+/* Design section changes for mobile*/ 
+	#Design li{
+		float:bottom;
+		width: 80%; 
+		height:auto;
+
+		min-height:auto;
+		max-height:auto;
+		max-width:auto;
+		min-width:auto;
+
+		left:0px;
+
+		padding:2px;
+		margin:2px;/*this is on all sides double between elements*/
+	}
+
+		#Design img {/*width flexibility for the linked display images*/
+		width:80%;
+		height:auto;
+	}
+
+	#behanceGallery {
+		width: 90%;
+	  left:5%;
+	}
+
+	#behanceGallery img {
+		width:80%;
+		height:auto;
+	}
+
+	.galleryDescription{
+		display:block;
+	}
+
+	#html5-video-holder{
+		width:192px;
+		height:144px;
+	}
 
