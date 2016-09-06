@@ -391,10 +391,8 @@ ported from other sites. Also will have near clouds image at base */
 
 
 /* mobile phone*/
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 700px)
-  and (-webkit-min-device-pixel-ratio: 2) {
+@media only screen  
+  and (max-device-width: 700px){
     
     body {
      font-size:18pt;
