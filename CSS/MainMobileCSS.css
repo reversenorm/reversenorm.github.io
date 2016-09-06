@@ -30,25 +30,16 @@
    }
    
    .movingBox{
-   	
    	width:auto;
-   	max-width:200px;
-   	
    }
    
    #main{
    	display:visible;
    	width:auto;
    	max-width:300px;
-   	left:5%;
+   	left:10%;
    }
    
-    #FooterSpace{
-   	display:visible;
-   	width:auto;
-   	max-width:300px;
-   	left:5%;
-   }
    
    #menu ul li a {
    	margin:20px 0px 0px 0px;
