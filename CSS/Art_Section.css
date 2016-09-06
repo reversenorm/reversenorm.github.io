@@ -74,31 +74,5 @@
 	}
 
 
-@media only screen 
-  and (min-device-width: 320px) 
-  and (max-device-width: 700px)
-  and (-webkit-min-device-pixel-ratio: 2) {
 
-	#Art li{
-		float:bottom;
-		width: 80%; 
-		height:auto;
-
-		min-height:auto;
-		max-height:auto;
-		max-width:auto;
-		min-width:auto;
-
-		left:0px;
-
-		padding:2px;
-		margin:2px;/*this is on all sides double between elements*/
-	}
-
-	#PreviousArrow, #NextArrow{
-		top:95%;
-	}
-
-
-}
 
