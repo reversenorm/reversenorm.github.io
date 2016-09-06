@@ -57,7 +57,7 @@ function  PositionScrollingImages(WhichImage){
     }else{
       setPosition("Sunrise",0);
       setPosition("Clouds",0);
-      setPosition("Near",IsNarrow);
+      setPosition("Near",0);
     };
     
 };
@@ -71,6 +71,8 @@ function setPosition(WhichImage,IsNarrow){
   
     if(WhichImage="Sunrise"){
          Layer_Mid_Sunrise.style["top"]=(MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise + "px";
+         console.log(IsNarrow);
+         console.log((MainHeight-Layer_Mid_Sunrise.clientHeight+IsNarrow)*Rate_Mid_Sunrise );
     };
     if(WhichImage="Clouds"){
         Layer_Main.style["top"]=(MainHeight-Layer_Main.clientHeight+100)*Rate_Main + "px";
