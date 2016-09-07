@@ -102,14 +102,19 @@
 		margin:2px;/*this is on all sides double between elements*/
 	}
 
-	#PreviousArrow, #NextArrow{
+	#NextArrow{
 		top:20%;
-		position:fixed;
+		right:6%;
+	}
+	
+	#PreviousArrow{
+		top:20%;
+		left:6%;
 	}
 	
 	#PreviousArrow img, #NextArrow img{
-		height:30%;
-		width:10%;
+		height:80%;
+		width:20%;
 	}
 	
 	#deviantArtGallery {
