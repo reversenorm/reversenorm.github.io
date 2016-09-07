@@ -107,6 +107,11 @@
 		position:fixed;
 	}
 	
+	#PreviousArrow img, #NextArrow img{
+		height:30%;
+		width:10%;
+	}
+	
 	#deviantArtGallery {
 		width:100%;
 	  left:-5%;
