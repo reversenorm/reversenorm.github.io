@@ -104,17 +104,17 @@
 
 	#NextArrow{
 		top:20%;
-		right:6%;
+		right:0%;
 	}
 	
 	#PreviousArrow{
 		top:20%;
-		left:6%;
+		left:0%;
 	}
 	
 	#PreviousArrow img, #NextArrow img{
-		height:80%;
-		width:20%;
+		height:50%;
+		width:40%;
 	}
 	
 	#deviantArtGallery {
