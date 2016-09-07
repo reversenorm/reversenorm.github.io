@@ -29,15 +29,15 @@
 	
 	#PreviousArrow{
 		z-index:11;
-		position:absolute;
-		top:50%;
+		position:fixed;
+		top:30%;
 		left:6%;
 	}
 	
 	#NextArrow{
 		z-index:12;
-		position:absolute;
-		top:50%;
+		position:fixed;
+		top:30%;
 		right:6%;
 	}
 
