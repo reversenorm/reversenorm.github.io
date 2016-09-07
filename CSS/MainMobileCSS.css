@@ -103,7 +103,8 @@
 	}
 
 	#PreviousArrow, #NextArrow{
-		top:5%;
+		top:20%;
+		position:fixed;
 	}
 	
 	#deviantArtGallery {
