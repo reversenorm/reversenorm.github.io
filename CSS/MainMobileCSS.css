@@ -90,6 +90,22 @@
 	#PreviousArrow, #NextArrow{
 		top:95%;
 	}
+	
+	#deviantArtGallery {
+		width:100%;
+	  left:0px;
+	}
+	
+	#liveDeviationImage img{
+		width:100%;
+	}
+	
+	#liveDeviation{
+		position:relative;
+		width: 99%;
+		left:0px;
+		text-align: center;
+	}
 
 /* Code section changes for mobile*/ 
 
@@ -144,8 +160,8 @@
 	}
 
 	#behanceGallery {
-		width: 90%;
-	  left:5%;
+		width:100%;
+	  left:0;
 	}
 
 	#behanceGallery img {
