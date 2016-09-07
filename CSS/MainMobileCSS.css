@@ -14,7 +14,7 @@
    clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
    	-webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
    	height:auto;
-   	width:auto;
+   	width:90%;
 }
 
  .titleEdge{
@@ -30,7 +30,7 @@
    }
    
    .movingBox{
-   	width:auto;
+   	width:90%;
    	display;inline;
    }
    
