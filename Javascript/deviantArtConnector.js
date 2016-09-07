@@ -51,7 +51,7 @@ var DeviantProjects = XMLLoader("http://backend.deviantart.com/rss.xml?type=devi
 			var DeviantTitle=DeviantProjects.getElementsByTagName("channel")[0].getElementsByTagName("item")[DeviationNumber].getElementsByTagName("title")[0].childNodes[0].nodeValue;
 
 
-			var htmlString="<div class='closeX'><a href='#d' onclick="+'toggleOffAllGalleries(); '+"align='right'>[X]</a></div><div id='PreviousArrow'><a href='#"+PerviousDeviation+"' onclick='openDeviation("+PerviousDeviation+", "+null+");'>PREVIOUS</a></div><div id='liveDeviation' ><div id='liveDeviationTitle'>";//add in the gallery description section
+			var htmlString="<div class='closeX'><a href='#d' onclick="+'toggleOffAllGalleries(); '+"align='right'>[X]</a></div><div id='PreviousArrow'><a href='#"+PerviousDeviation+"' onclick='openDeviation("+PerviousDeviation+", "+null+");'><h1>&#60;</h1></a></div><div id='liveDeviation' ><div id='liveDeviationTitle'>";//add in the gallery description section
 
 			htmlString=htmlString.concat("<h1>"+DeviantTitle+"</h1><br/></div>");//add title to lightbox display and close LiveDeviationTitle div
 
@@ -59,7 +59,7 @@ var DeviantProjects = XMLLoader("http://backend.deviantart.com/rss.xml?type=devi
 			htmlString=htmlString.concat("<div id='liveDeviationImage'><a href='"+DeviantImageSiteURL+"' target='_blank'><img src='"+DeviantImageURL+"' ></a></div>");
 
 
-			htmlString = htmlString.concat("</div><div id='NextArrow'><a href='#"+NextDeviation+"' onclick='openDeviation("+NextDeviation+", "+null+");'>NEXT</a></div>");//close LiveDeivation Div and add nextDeviation button link
+			htmlString = htmlString.concat("</div><div id='NextArrow'><a href='#"+NextDeviation+"' onclick='openDeviation("+NextDeviation+", "+null+");'><h1>&#62;</h1></a></div>");//close LiveDeivation Div and add nextDeviation button link
 
 			return htmlString;
 
