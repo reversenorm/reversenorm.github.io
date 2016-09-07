@@ -8,7 +8,7 @@
 	     max-height: 90px;
 	}
 
-	.title{/*blank out the clip path because it sort of loads but is broken*/
+.title{/*blank out the clip path because it sort of loads but is broken*/
 	-webkit-clip-path:""; 
         clip-path:"";
         clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
@@ -16,6 +16,11 @@
    	height:auto;
    	width:76%;
    	margin:20px;
+}
+
+.title h1{
+	margin:0px 0px 0px 50px;
+	
 }
 
  .titleEdge{
