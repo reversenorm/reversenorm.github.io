@@ -47,4 +47,13 @@
 		width:auto;
 		height:80%;
 	}
+	
+	@supports (overflow:-webkit-marquee) and (justify-content:inherit) {
+/*Catches Safari which has display issues*/
+
+#Design li{
+margin:25px;	
+}
+
+]
 
