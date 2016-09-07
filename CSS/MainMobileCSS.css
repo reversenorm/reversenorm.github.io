@@ -68,7 +68,7 @@
 /* Art section changes for mobile*/ 
 	#Art li{
 		float:bottom;
-		width: 80%; 
+		width: 90%; 
 		height:auto;
 
 		min-height:auto;
@@ -107,7 +107,7 @@
 /* Design section changes for mobile*/ 
 	#Design li{
 		float:bottom;
-		width: 80%; 
+		width: 90%; 
 		height:auto;
 
 		min-height:auto;
