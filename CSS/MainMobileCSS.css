@@ -66,6 +66,11 @@
 	}
 	
 /* Art section changes for mobile*/ 
+	#Art{
+		top:2px;
+		
+	}
+
 	#Art li{
 		float:bottom;
 		width: 90%; 
@@ -88,6 +93,12 @@
 
 /* Code section changes for mobile*/ 
 
+	#Code{
+		top:2px;
+		
+	}
+
+
 	#Code li{
 		float:bottom;
 		width: 80%; 
@@ -105,6 +116,12 @@
 	}
 
 /* Design section changes for mobile*/ 
+	#Design{
+		top:2px;
+		
+	}
+
+
 	#Design li{
 		float:bottom;
 		width: 90%; 
