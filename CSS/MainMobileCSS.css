@@ -20,6 +20,7 @@
  .titleEdge{
    	display:none;
    	visibility:none;
+   	left:0;
    }
    
    .menuEdge{
