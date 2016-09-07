@@ -10,11 +10,12 @@
 
 	.title{/*blank out the clip path because it sort of loads but is broken*/
 	-webkit-clip-path:""; 
-   clip-path:"";
-   clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
+        clip-path:"";
+        clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
    	-webkit-clip-path: polygon(0% 100%, 100% 100%, 100% 0%, 0% 0%);
    	height:auto;
    	width:76%;
+   	margin:20px;
 }
 
  .titleEdge{
@@ -32,6 +33,7 @@
    .movingBox{
    	width:76%;
    	display;inline;
+   	margin:20px;
    }
    
    #main{
@@ -57,7 +59,7 @@
    #about {
     position:fixed;
     display:none;
-    left:80px;
+    left:70px;
     top:50px;
     width:60%;
     height:75%;
@@ -93,7 +95,7 @@
 	
 	#deviantArtGallery {
 		width:100%;
-	  left:0px;
+	  left:-5%;
 	}
 	
 	#liveDeviationImage img{
@@ -161,7 +163,7 @@
 
 	#behanceGallery {
 		width:100%;
-	  left:0;
+	  left:-5%;
 	}
 
 	#behanceGallery img {
