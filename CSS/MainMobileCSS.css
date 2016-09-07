@@ -67,6 +67,14 @@
 
 	}
 	
+.closeX{/*also triggers toggleLayer('overlay') on click but is positioned [X] in the corner for those who look for an x to click*/
+        position:fixed;
+        display:block;
+        z-index:30;
+        top:4.5%;
+        left:86%;
+    }
+	
 /* Art section changes for mobile*/ 
 	#Art{
 		top:2px;
@@ -90,7 +98,7 @@
 	}
 
 	#PreviousArrow, #NextArrow{
-		top:95%;
+		top:5%;
 	}
 	
 	#deviantArtGallery {
