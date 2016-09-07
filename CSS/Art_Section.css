@@ -31,14 +31,14 @@
 		z-index:11;
 		position:fixed;
 		top:30%;
-		left:6%;
+		left:16%;
 	}
 	
 	#NextArrow{
 		z-index:12;
 		position:fixed;
 		top:30%;
-		right:6%;
+		right:16%;
 	}
 
 	/*Adds glowing edge effect to a box same as on mainCSS can be deleted on combind*/
