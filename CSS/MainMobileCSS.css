@@ -204,13 +204,9 @@
 		margin:0px 0px 50px 0px;
 	}
 
-	#html5-video-holder{
-		width:256px;
-		height:196px;
-	}
 	
 	iframe { 
-	width: 256px; 
-	height: 196px; 
+	width: 80%; 
+	height: auto; 
 	}
 
