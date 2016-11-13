@@ -80,44 +80,10 @@ a{
     width: 400px;
     height: 50px;
 
-    clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-    -webkit-clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-    -moz-clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-    -ms-clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-    -o-clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-
-     -webkit-clip-path: url("#clip-shape"); 
-   clip-path: url("#clip-shape");
 
 }
 
-.titleEdge{
 
-	position:relative;
-	float:left;
-	left:390px;
-	top:-98px;
-
-	-ms-transform: rotate(-55deg); /* IE 9 */
-    -webkit-transform: rotate(-55deg); /* Safari */
-    -moz-transform: rotate(-55deg); 
-    -o-transform: rotate(-55deg); 
-    transform: rotate(-55deg);
-    height:108px;/*hypotenuse */
-    width:0px;
-
- 	/*add glowing edge but just to one side and offset to right of shape only*/
-    border: solid rgba(200, 115, 15, .75);
-     -webkit-box-shadow: 2px 2px 3px 1px rgba(255,100,0,0.5);
-   -moz-box-shadow: 2px 2px 3px 1px rgba(255,100,0,0.5);
-   -ms-box-shadow: 2px 2px 3px 1px rgba(255,100,0,0.5);
-   -o-box-shadow: 2px 2px 3px 1px rgba(255,100,0,0.5);
-   box-shadow: 2px 2px 3px 1px rgba(255,100,0,0.5);
-
-   /*slightly thicker border width to accomodate transform effect*/
-   border-width: 0px 3px 0px 0px;
-
-}
 
 /*____End General classes ________*/ 
 
@@ -264,15 +230,6 @@ ported from other sites. Also will have near clouds image at base */
     width: 100px;
     text-align: center;
     
-    /*add angled edge to buttons*/
-    clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-    -webkit-clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-    -moz-clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-    -ms-clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-    -o-clip-path: polygon(0% 100%, 100% 100%, 75% 0%, 0% 0%);
-
-    -webkit-clip-path: url("#clip-shape"); 
-   clip-path: url("#clip-shape");
 
     margin:-10px 0px 0px 0px;
 
@@ -285,32 +242,6 @@ ported from other sites. Also will have near clouds image at base */
     color: white;
 }
 
-.menuEdge{
-
-	position:relative;
-	left:93px;/*position just inside edge of clipping mask*/
-	top:-24px;
-
-	-ms-transform: rotate(-42deg); /* IE 9 */
-    -webkit-transform: rotate(-42deg); /* Safari */
-    -moz-transform: rotate(-42deg); 
-    -o-transform: rotate(-42deg); 
-    transform: rotate(-42deg);
-    height:26px;/*hypotenuse */
-    width:0px;
-
- 	/*add glowing edge but just to one side and offset to right of shape only*/
-    border: solid rgba(200, 115, 15, .75);
-     -webkit-box-shadow: 2px 2px 3px 1px rgba(255,100,0,0.5);
-   -moz-box-shadow: 2px 2px 3px 1px rgba(255,100,0,0.5);
-   -ms-box-shadow: 2px 2px 3px 1px rgba(255,100,0,0.5);
-   -o-box-shadow: 2px 2px 3px 1px rgba(255,100,0,0.5);
-   box-shadow: 2px 2px 3px 1px rgba(255,100,0,0.5);
-
-   /*slightly thicker border width to accomodate transform effect*/
-   border-width: 0px 2px 0px 0px;
-
-}
 
 #about {
     color:#000000;
