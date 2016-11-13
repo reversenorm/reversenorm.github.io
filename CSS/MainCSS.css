@@ -215,6 +215,7 @@ ported from other sites. Also will have near clouds image at base */
     position:relative;
     left:-40px;
     top:0px;
+    height:60px;
 }
 
 
@@ -231,7 +232,7 @@ ported from other sites. Also will have near clouds image at base */
     text-align: center;
     
 
-    margin:-10px 0px 0px 0px;
+    margin:10px 0px 0px 0px;
 
 
 }
